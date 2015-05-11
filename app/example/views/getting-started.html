@@ -85,6 +85,13 @@
   </div>
 </div>
 
+
+<div class="ui toggle checkbox">
+    <input type="checkbox" name="public">
+    <label>Subscribe to weekly newsletter</label>
+</div>
+
+
 <hr>
 <div class="ui piled segment">
   <h4 class="ui header">A header</h4>
@@ -141,17 +148,9 @@
 <br>
 <script>
 
-  // $("#testme").click(function(){
 
-    $('.dropdown').dropdown({
-      transition: 'drop'
-    });
-
-  // })
-
-jQuery('.test.checkbox').checkbox('attach events', '.toggle.button');
-jQuery('.test.checkbox').checkbox('attach events', '.check.button', 'check');
-jQuery('.test.checkbox').checkbox('attach events', '.uncheck.button', 'uncheck');
+$('.ui.checkbox')
+  .checkbox();
 
 </script>
 
