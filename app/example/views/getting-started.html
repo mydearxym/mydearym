@@ -19,13 +19,14 @@
 </super-navigate>
 
 <h3>YM-ui test</h3>
-
-<div class="ui tiny progress success">
-  <div class="bar">
-    <div class="progress"></div>
+<div class="ui text shape">
+    <div class="sides">
+      <div class="active ui header side">Did you know? This side starts visible.</div>
+      <div class="ui header side">Help, its another side!</div>
+      <div class="ui header side">This is the last side</div>
+    </div>
   </div>
-  <div class="label">Everything worked, your file is all ready.</div>
-</div>
+
 
 <div class="ui comments">
   <div class="comment">
@@ -86,10 +87,34 @@
 </div>
 
 
+<div class="ui transparent left icon input">
+  <input type="text" placeholder="Search...">
+  <i class="search icon"></i>
+</div>
+
 <div class="ui toggle checkbox">
     <input type="checkbox" name="public">
     <label>Subscribe to weekly newsletter</label>
 </div>
+
+<div class="ui teal progress" id="example2">
+  <div class="bar"></div>
+  <div class="label">22% Earned</div>
+</div>
+
+<div class="ui buttons">
+  <div class="ui button">Cancel</div>
+  <div class="or"></div>
+  <div class="ui positive button">Save</div>
+</div>
+
+
+<h2 class="ui header">
+  <i class="plug icon"></i>
+  <div class="content">
+    Uptime Guarantee
+  </div>
+</h2>
 
 
 <hr>
@@ -151,6 +176,15 @@
 
 $('.ui.checkbox')
   .checkbox();
+
+setTimeout(function(){
+  $('#example2').progress({
+    percent: 55
+  });
+  $('.shape').shape('flip up');
+
+},3000)
+
 
 </script>
 
