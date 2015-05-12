@@ -1,189 +1,91 @@
-<div class="padding">
-
-  <super-navbar>
+<super-navbar>
   <super-navbar-title>
   Welcome to Supersonic!
-</super-navbar-title>
+  </super-navbar-title>
 </super-navbar>
+<style>
+/*todo load a diff*/
+  body {
+    background: #3B3F45 !important;
+  }
 
-<p>Awesome! This file is located at <strong>app/example/views/getting-started.html</strong> &mdash; open it, change some text and save the file. The changes are updated to all connected devices. Cool, huh?</p>
+</style>
 
-<p>Below, you can see our multi-page navigation in action. Tap on a button to move to a new view.</p>
-
-<super-navigate view-id="using-the-scanner">
+<!-- <super-navigate view-id="using-the-scanner">
 <button class="button button-block button-positive icon-left super-wand">Using the AppGyver Scanner</button>
 </super-navigate>
 
 <super-navigate view-id="learn-more">
 <button class="button button-block button-positive icon-left super-university">Learn more</button>
 </super-navigate>
+-->
+<!-- <h3>fullform test</h3> -->
 
-<h3>YM-ui test</h3>
-<div class="ui text shape">
-    <div class="sides">
-      <div class="active ui header side">Did you know? This side starts visible.</div>
-      <div class="ui header side">Help, its another side!</div>
-      <div class="ui header side">This is the last side</div>
-    </div>
-  </div>
+<div class="container" ng-controller="UITestController">
+  <div class="fs-form-wrap" id="fs-form-wrap">
 
+    <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+      <ol class="fs-fields">
+        <li>
+          <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
+          <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
+        </li>
+<!--         <li>
+          <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
+          <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
+        </li>
+ -->
 
-<div class="ui comments">
-  <div class="comment">
-    <a class="avatar">
-      <img src="/images/avatar/small/christian.jpg">
-    </a>
-    <div class="content">
-      <a class="author">Christian Rocha</a>
-      <div class="metadata">
-        <span class="date">2 days ago</span>
-      </div>
-      <div class="text">
-        I'm very interested in this motherboard. Do you know if it'd work in a Intel LGA775 CPU socket?
-      </div>
-      <div class="actions">
-        <a class="reply">Reply</a>
-      </div>
-    </div>
-    <div class="collapsed comments">
-      <div class="comment">
-        <a class="avatar">
-          <img src="/images/demo/avatar2.jpg">
-        </a>
-        <div class="content">
-          <a class="author">Pawfin Dog</a>
-          <div class="metadata">
-            <span class="date">1 day ago</span>
+        <li data-input-trigger>
+          <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
+          <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+            <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
+            <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
+            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
           </div>
-          <div class="text">
-            I think this is a great idea and i am voting on it
-          </div>
-          <div class="actions">
-            <a class="reply">Reply</a>
-          </div>
-        </div>
-        <div class="comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="/images/demo/avatar.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Dog Doggington</a>
-              <div class="metadata">
-                <span class="date">20 minutes ago</span>
-              </div>
-              <div class="text">
-                I think this is a great idea and i am voting on it
-              </div>
-              <div class="actions">
-                <a class="reply">Reply</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </li>
 
+<!--         <li>
+          <label class="fs-field-label fs-anim-upper" for="q5">What's your budget?</label>
+          <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100"/>
+        </li>
+ -->      
 
-<div class="ui transparent left icon input">
-  <input type="text" placeholder="Search...">
-  <i class="search icon"></i>
-</div>
+      </ol><!-- /fs-fields -->
+      <button class="fs-submit" type="" ng-click="submit()">Send answers</button>
+    </form><!-- /fs-form -->
+  </div><!-- /fs-form-wrap -->
 
-<div class="ui toggle checkbox">
-    <input type="checkbox" name="public">
-    <label>Subscribe to weekly newsletter</label>
-</div>
+</div><!-- /container -->
 
-<div class="ui teal progress" id="example2">
-  <div class="bar"></div>
-  <div class="label">22% Earned</div>
-</div>
-
-<div class="ui buttons">
-  <div class="ui button">Cancel</div>
-  <div class="or"></div>
-  <div class="ui positive button">Save</div>
-</div>
-
-
-<h2 class="ui header">
-  <i class="plug icon"></i>
-  <div class="content">
-    Uptime Guarantee
-  </div>
-</h2>
-
-
-<hr>
-<div class="ui piled segment">
-  <h4 class="ui header">A header</h4>
-  <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
-   <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
-   <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-</div>
-<div class="ui blue segment">
-  Blue
-</div>
-<div class="ui orange segment">
-  Orange
-</div>
-<div class="ui green segment">
-  Green
-</div>
-<div class="ui red segment">
-  Red
-</div>
-<div class="ui purple segment">
-  Purple
-</div>
-<div class="ui teal segment">
-  Teal
-</div>
-
-<div class="ui blue inverted segment">
-  Blue
-</div>
-<div class="ui orange inverted segment">
-  Orange
-</div>
-<div class="ui green inverted segment">
-  Green
-</div>
-<div class="ui red inverted segment">
-  Red
-</div>
-<div class="ui purple inverted segment">
-  Purple
-</div>
-<div class="ui teal inverted segment">
-  Teal
-</div>
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <script>
+  console.info("2");
+  
+  $(document).ready(function(){
+    console.info("1");
+    (function() {
+      var formWrap = document.getElementById( 'fs-form-wrap' );
+
+      console.info("2");
+
+      [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+        new SelectFx( el, {
+          stickyPlaceholder: false,
+          onChange: function(val){
+            document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+          }
+        });
+      } );
+
+      new FForm( formWrap, {
+        onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+        } );
+    })();
 
 
-$('.ui.checkbox')
-  .checkbox();
-
-setTimeout(function(){
-  $('#example2').progress({
-    percent: 55
-  });
-  $('.shape').shape('flip up');
-
-},3000)
+  })
 
 
 </script>

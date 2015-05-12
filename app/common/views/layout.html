@@ -10,8 +10,20 @@
   <link rel="stylesheet" href="/app/common/stylesheets/application.css" />
   <link rel="import" href="/components/supersonic/components/import.html">
 
-  <link rel="stylesheet" href="/components/semantic-ui/dist/semantic.min.css" />
+
+  <!-- fullform -->
   
+  <link rel="stylesheet" href="/components/FullForm/css/demo.css" />
+  <link rel="stylesheet" href="/components/FullForm/css/component.css" />
+  <link rel="stylesheet" href="/components/FullForm/css/cs-select.css" />
+  <link rel="stylesheet" href="/components/FullForm/css/cs-skin-boxes.css" />
+
+  <!-- fullform end -->
+
+  <link rel="stylesheet" href="/components/semantic-ui/dist/semantic.min.css" />
+
+  <script src="/components/FullForm/js/modernizr.custom.js"></script>
+
   <script src="http://localhost/cordova.js"></script>
   <script src="/components/steroids-js/steroids.js"></script>
   <script src="/components/angular/angular.js"></script>
@@ -20,6 +32,14 @@
 
   <script src="/components/jquery/dist/jquery.min.js"></script>
   <script src="/components/semantic-ui/dist/semantic.min.js"></script>
+
+  <!-- FullForm -->
+  <script src="/components/FullForm/js/classie.js"></script>
+  <script src="/components/FullForm/js/selectFx.js"></script>
+  <script src="/components/FullForm/js/fullscreenForm.js"></script>
+
+  <!-- FullForm end -->
+
 
   <% _.each(yield.modules, function(module) { %>
   <script src="/app/<%= module %>.js"></script>
