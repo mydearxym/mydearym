@@ -2,8 +2,8 @@
 /dist
 node_modules
 bower_components
-!bower_components/pagesStyle/
-!bower_components/morphOverlay/
+!bower_components/pagesStyle/*
+!bower_components/morphOverlay/*
 
 .sass-cache/
 ym.keystore
