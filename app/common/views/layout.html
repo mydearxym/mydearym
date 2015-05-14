@@ -11,21 +11,18 @@
   <link rel="import" href="/components/supersonic/components/import.html">
 
   <link rel="stylesheet" href="/components/semantic-ui/dist/semantic.min.css" />
+  <link rel="stylesheet" href="/components/ionicons/css/ionicons.min.css" />
+
+  <link rel="stylesheet" href="/components/pagesStyle/base.css" />
+  <link rel="stylesheet" href="/components/pagesStyle/dashboard.css" />
 
   <!-- fullform -->
-  <link rel="stylesheet" href="/components/FullForm/css/demo.css" />
+<!--   <link rel="stylesheet" href="/components/FullForm/css/demo.css" />
   <link rel="stylesheet" href="/components/FullForm/css/component.css" />
   <link rel="stylesheet" href="/components/FullForm/css/cs-select.css" />
   <link rel="stylesheet" href="/components/FullForm/css/cs-skin-boxes.css" />
-  <!-- fullform end -->
-
-  <!-- wave bottom-->
-
-<!--   <link rel="stylesheet" type="text/css" href="/components/wave-bottom/css/demo.css" />
-  <link rel="stylesheet" type="text/css" href="/components/wave-bottom/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="/components/wave-bottom/css/menu_wave.css" />
  -->
-  <!-- wave bottom end-->
+  <!-- fullform end -->
   
   <script src="http://localhost/cordova.js"></script>
   <script src="/components/steroids-js/steroids.js"></script>
@@ -37,10 +34,13 @@
   <script src="/components/semantic-ui/dist/semantic.min.js"></script>
 
   <!-- FullForm -->
+<!-- 
   <script src="/components/FullForm/js/modernizr.custom.js"></script>
   <script src="/components/FullForm/js/classie.js"></script>
   <script src="/components/FullForm/js/selectFx.js"></script>
   <script src="/components/FullForm/js/fullscreenForm.js"></script>
+
+ -->
   <!-- FullForm end -->
 
   <!-- wave bottom-->
@@ -50,9 +50,7 @@
   <script src="/components/wave-bottom/js/main3.js"></script>
  -->  
   <!-- wave bottom end-->
-
-
-
+  
   <% _.each(yield.modules, function(module) { %>
   <script src="/app/<%= module %>.js"></script>
   <% }); %>

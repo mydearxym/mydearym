@@ -4,14 +4,21 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #00B5FF;
+
+/*  background-color: #00B5FF;
   color: #ffffff;
   padding-left: 6px;
   padding-right: 6px;
+*/
+
+/**/
+  background-color: rgb(240, 240, 240);
+
 }
 
 navigation-bar title {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: #62706c;
   font-size: 18px;
   font-weight: 600;
 }

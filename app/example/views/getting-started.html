@@ -1,102 +1,50 @@
 <super-navbar>
   <super-navbar-title>
-  Welcome to Supersonic!
+  <i class="icon ion-ios-cloud-outline"></i>你好雨蒙
   </super-navbar-title>
+
+  <super-navbar-button side="right"> <i class="icon ion-ios-cloud-outline"></i></super-navbar-button>
 </super-navbar>
-<style>
-/*todo load a diff*/
-  body {
-    background: #3B3F45 !important;
-  }
-
-</style>
-
-<!-- <super-navigate view-id="using-the-scanner">
-<button class="button button-block button-positive icon-left super-wand">Using the AppGyver Scanner</button>
-</super-navigate>
-
-<super-navigate view-id="learn-more">
-<button class="button button-block button-positive icon-left super-university">Learn more</button>
-</super-navigate>
--->
-<!-- <h3>fullform test</h3> -->
 
 <div class="container" ng-controller="UITestController">
-  <div class="fs-form-wrap" id="fs-form-wrap">
+  <div>
+    <span class="left"><i class="icon ion-ios-cloud-outline"></i>你好</span>
+    <span class="right"><i class="icon ion-ios-cloud-outline"></i>雨蒙</span>
+  </div>
+  <div class="clearfix"></div>
 
-    <form id="myform" class="fs-form fs-form-full" autocomplete="off">
-      <ol class="fs-fields">
+  <div style="margin-left:auto;margin-right:auto;">-</div>
 
-<!--         <li>
-          <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
-          <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
-        </li>
- -->
+  <div class="dashboard-avatar-img">
+    <img ng-src="/components/pagesStyle/img/test.svg" />
+  </div>
 
-<!--         <li>
-          <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
-          <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
-        </li>
- -->
-
-        <li data-input-trigger>
-          <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">请选择你的职业<label>
-          <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-            <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
-            <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
-            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
-          
-            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
-            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
-            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
-
-
-
-          </div>
-        </li>
-
-<!--         <li>
-          <label class="fs-field-label fs-anim-upper" for="q5">What's your budget?</label>
-          <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100"/>
-        </li>
- -->      
-
-      </ol><!-- /fs-fields -->
-      <button class="fs-submit" type="" ng-click="submit()">Send answers</button>
-    </form><!-- /fs-form -->
-  </div><!-- /fs-form-wrap -->
+  <h4>hello?</h5>
 
 </div><!-- /container -->
 
 <script>
-  console.info("2");
-  
-  $(document).ready(function(){
-    console.info("1");
-    (function() {
-      var formWrap = document.getElementById( 'fs-form-wrap' );
+  // $(document).ready(function(){
+    
+  //   (function() {
+  //     var formWrap = document.getElementById( 'fs-form-wrap' );
+      
+  //     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+  //       new SelectFx( el, {
+  //         stickyPlaceholder: false,
+  //         onChange: function(val){
+  //           document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+  //         }
+  //       });
+  //     } );
 
-      console.info("2");
-
-      [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
-        new SelectFx( el, {
-          stickyPlaceholder: false,
-          onChange: function(val){
-            document.querySelector('span.cs-placeholder').style.backgroundColor = val;
-          }
-        });
-      } );
-
-      new FForm( formWrap, {
-        onReview : function() {
-            classie.add( document.body, 'overview' ); // for demo purposes only
-          }
-        } );
-    })();
-
-
-  })
-
+  //     new FForm( formWrap, {
+  //       onReview : function() {
+  //           classie.add( document.body, 'overview' ); // for demo purposes only
+  //         }
+  //       } );
+  //   })();
+  // })
 
 </script>
 

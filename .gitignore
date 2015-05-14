@@ -2,6 +2,7 @@
 /dist
 node_modules
 bower_components
+!bower_components/pagesStyle/
 .sass-cache/
 ym.keystore
 config/cloud.json

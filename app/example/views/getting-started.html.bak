@@ -6,6 +6,28 @@
 </super-navbar-title>
 </super-navbar>
 
+  <div class="fs-form-wrap" id="fs-form-wrap">
+
+    <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+      <ol class="fs-fields">
+        <li data-input-trigger>
+          <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">请选择你的职业<label>
+          <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+            <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
+            <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
+            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+          
+            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+            <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+          </div>
+        </li>
+      </ol><!-- /fs-fields -->
+      <button class="fs-submit" type="" ng-click="submit()">Send answers</button>
+    </form><!-- /fs-form -->
+  </div><!-- /fs-form-wrap -->
+
+
 <p>Awesome! This file is located at <strong>app/example/views/getting-started.html</strong> &mdash; open it, change some text and save the file. The changes are updated to all connected devices. Cool, huh?</p>
 
 <p>Below, you can see our multi-page navigation in action. Tap on a button to move to a new view.</p>
