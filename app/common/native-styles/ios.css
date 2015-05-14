@@ -16,8 +16,6 @@ navigation-bar title {
   color: #62706c;
   font-size: 18px;
   font-weight: 600;
-  background-image: url(default_back_icon.png);
-
 }
 
 navigation-bar button, navigation-bar back-bar-button {
