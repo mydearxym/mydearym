@@ -16,17 +16,6 @@
   <link rel="stylesheet" href="/components/pagesStyle/base.css" />
   <link rel="stylesheet" href="/components/pagesStyle/dashboard.css" />
 
-  <!-- morphOverlay -->
-  <link rel="stylesheet" href="/components/morphOverlay/css/demo.css" />
-  <link rel="stylesheet" href="/components/morphOverlay/css/component.css" />
-  <link rel="stylesheet" href="/components/morphOverlay/css/content.css" />
-  
-  <script src="/components/morphOverlay/js/modernizr.custom.js"></script>
-  <script src="/components/morphOverlay/js/classie.js"></script>
-  <script src="/components/morphOverlay/js/uiMorphingButton_fixed.js"></script>
-  
-  <!-- morphOverlay end -->
-
 
   <link rel="stylesheet" href="/components/animate.css/animate.min.css" />
   <link rel="stylesheet" href="/components/ionicons/css/ionicons.min.css" />
@@ -48,6 +37,8 @@
   <script src="/components/jquery/dist/jquery.min.js"></script>
   <script src="/components/semantic-ui/dist/semantic.min.js"></script>
 
+  <script src="/components/swiper/jquery.touchSwipe.min.js"></script>
+
   <!-- FullForm -->
 <!-- 
   <script src="/components/FullForm/js/modernizr.custom.js"></script>
@@ -57,14 +48,6 @@
 
  -->
   <!-- FullForm end -->
-
-  <!-- wave bottom-->
-<!-- 
-  <script src="/components/wave-bottom/js/snap.svg-min.js"></script>
-  <script src="/components/wave-bottom/js/classie.js"></script>
-  <script src="/components/wave-bottom/js/main3.js"></script>
- -->  
-  <!-- wave bottom end-->
   
   <% _.each(yield.modules, function(module) { %>
   <script src="/app/<%= module %>.js"></script>

@@ -1,6 +1,6 @@
 angular
   .module('example')
-  .controller('DashboardController', function($scope, supersonic) {
+  .controller('DashboardController', function($scope, supersonic, $timeout) {
   	var self = $scope;
 
   	self.navbarTitle = "UI 测试哈"
@@ -12,6 +12,14 @@ angular
   		supersonic.ui.layers.push(view);
   	}
   
+  	self.goToRecomment = function(){
+
+  		$timeout(function(){
+  			var view = new supersonic.ui.View("example#recommend-page");
+  			supersonic.ui.layers.push(view);
+  		})
+  	}
+
 
   });
 
