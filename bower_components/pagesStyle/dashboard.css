@@ -31,12 +31,16 @@
   /*font-size: x-large;*/
   /*margin-right:3%;*/
 }
-.dashboard-recommend {
+
+#dashboard-recommend {
   width: 5%;
   margin-right: 4%;
-  margin-top:5px;
+  margin-top:7px;
+ 
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0;
+  /*-vendor-animation-iteration-count: infinite;*/
 }
-
 
 .dashboard-middle-selector {
   margin-left: 28%;
