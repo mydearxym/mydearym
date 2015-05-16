@@ -16,7 +16,7 @@ angular
   	// 	var view = new supersonic.ui.View("example#wave-test");
   	// 	supersonic.ui.layers.push(view);
   	// }
-  
+    
   	self.openIceBox = function(){
   		supersonic.ui.drawers.open("left").then( function() {
   			supersonic.logger.debug("Drawer was shown");

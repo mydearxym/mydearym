@@ -1,4 +1,14 @@
 <link rel="stylesheet" href="/components/pagesStyle/dashboard.css" />
+
+<link rel="stylesheet" href="/components/dialogs/css/dialog.css" />
+<!-- <link rel="stylesheet" href="/components/dialogs/css/dialog-alex.css" /> -->
+<link rel="stylesheet" href="/components/dialogs/css/dialog-sandra.css" />
+
+<script src="/components/dialogs/js/modernizr.custom.js"></script>
+<script src="/components/dialogs/js/classie.js"></script>
+<script src="/components/dialogs/js/dialogFx.js"></script>
+
+
 <super-navbar>
 <super-navbar-title>
 <i class="icon ion-ios-cloud-outline"></i>你好雨蒙
@@ -32,6 +42,7 @@
     <span><img ng-src="/components/pagesStyle/img/cart.svg" /></span>
   </div>
 
+  <!-- <button class="button" data-dialog="somedialog" class="trigger">我买xx</button> -->
   <div class="shop-box">
     <div class="swipegory">
       <nav>
@@ -44,7 +55,8 @@
         </ul>
       </nav>
 
-      <ul class="panes" style="color:tomato;">
+      <ul class="panes">
+
         <div class="dashboard-avatar-img">
           <img ng-src="/components/pagesStyle/img/test.svg" />
         </div>
@@ -63,6 +75,16 @@
 
 
 <script>
+  // (function() {
+
+  //   var dlgtrigger = document.querySelector( '[data-dialog]' );
+  //   // var dlgtrigger = document.getElementById("fuckme");
+  //   var somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) );
+  //   var dlg = new DialogFx( somedialog );
+  //   dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+  // })();
+
 //swipers :js, for me it's durty code
 var autoAdjustHeight = false;
 $('nav a').on('mousedown', function(e){
