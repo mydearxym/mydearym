@@ -13,18 +13,22 @@ angular
   	}
   
   	self.goToRecomment = function(){
-
   		$timeout(function(){
   			var view = new supersonic.ui.View("example#recommend-page");
   			supersonic.ui.layers.push(view);
   		})
   	}
 
+  	jQuery("#mailMan").on("dashboard:swiper:goto", function(e, data){
+      supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
+      console.log("@dashboard:swiper:goto: ", data)
+  	})
 
   });
 
-//init the animation staff
 
+
+//init the animation staff
 $(function(){
 	var animationName = "animated rubberBand";
 	var animationEnd  = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";

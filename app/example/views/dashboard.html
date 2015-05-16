@@ -52,12 +52,12 @@
         <li style="height:200px;"></li>
         <li style="height:200px;"></li>
         
-
       </ul>
     </div>
 
   </div>
 
+  <div id="mailMan"></div>
 </div><!-- /container -->
 
 <script>
@@ -105,6 +105,7 @@ $("ul.panes").swipe({
     goTo++;
     swipegoryUpdate(goTo); 
     console.log("swipeLeft: ", goTo);
+    $("#mailMan").trigger("dashboard:swiper:goto", goTo)
   },
   swipeRight:function(event, direction, distance, duration, fingerCount) {
     //This only fires when the user swipes left
@@ -112,6 +113,7 @@ $("ul.panes").swipe({
     goTo--;
     swipegoryUpdate(goTo); 
     console.log("swipeRight: ", goTo);
+    $("#mailMan").trigger("dashboard:swiper:goto", [goTo])
   
   },
   threshold: 50,
