@@ -29,7 +29,7 @@
 <div ng-controller="FamilyController">
 
 	<div class="row">
-		<div class="col col-30 weight-font">75</div>
+		<div class="col col-30 weight-font odometer">75</div>
 		<div class="col col-30 birthday-title">生日</div>
 		<div class="col col-30 height-font">172</div>
 	</div>
@@ -44,16 +44,32 @@
 	<hr>
 	
 	<div class="slider-wrapper" style="width:80%;margin-left:10%;">
-		<input type="text" class="js-min-max-start" />
+		<input type="text" class="weight-selector" />
+		<h3>weight is: <span id="show_weight"></span>kg</h3>
+
 	</div>
 
 </div>
 
 <script>
-	var vals = document.querySelector('.js-min-max-start');
-	var initVals = new Powerange(vals, { min: 16, max: 256, start: 128 });
-	var init = new Powerange(elem, { min: 16, max: 256, start: 128 });
 
+	window.odometerOptions = {
+		format: '(ddd).dd',
+		duration: 500,
+		theme: "default"
+	};
+
+	var weight_elem = document.querySelector('.weight-selector');
+	var weight_range = new Powerange(weight_elem, { min: 16, max: 120, start: 60, callback:weightChange });
+
+	function weightChange() {
+		console.log("weightChange: ", weight_elem.value)
+		document.getElementById("show_weight").innerHTML = weight_elem.value;
+
+		setTimeout(function(){
+			$(".weight-font").html(weight_elem.value);
+		},200)
+	}
 
 </script>
 
