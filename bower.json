@@ -8,6 +8,7 @@
     "semantic-ui": "~1.12.2",
     "jquery": "~2.1.4",
     "ionicons": "~2.0.1",
-    "animate.css": "~3.2.6"
+    "animate.css": "~3.2.6",
+    "ngDialog": "~0.4.0"
   }
 }

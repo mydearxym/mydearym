@@ -1,13 +1,20 @@
 <link rel="stylesheet" href="/components/pagesStyle/dashboard.css" />
+<style>
+#bill {
+  width:100%;
+  /*height:200px;*/
+  height:0px;
+  background:#595959;
+  z-index:20000;
+  color:white !important;
 
-<link rel="stylesheet" href="/components/dialogs/css/dialog.css" />
-<!-- <link rel="stylesheet" href="/components/dialogs/css/dialog-alex.css" /> -->
-<link rel="stylesheet" href="/components/dialogs/css/dialog-sandra.css" />
+  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,0.73);
+  -moz-box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,0.73);
+  box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,0.73);
 
-<script src="/components/dialogs/js/modernizr.custom.js"></script>
-<script src="/components/dialogs/js/classie.js"></script>
-<script src="/components/dialogs/js/dialogFx.js"></script>
+}
 
+</style>
 
 <super-navbar>
 <super-navbar-title>
@@ -17,7 +24,7 @@
 <super-navbar-button side="right"> <i class="icon ion-ios-cloud-outline"></i></super-navbar-button>
 </super-navbar>
 
-<div class="container" ng-controller="DashboardController">
+<div class="container" ng-controller="DashboardController" style="position:relative;">
   <div>
     <div class="left dashboard-famliy-icon" id="dashboard-family" ng-click="goToFamily()">
       <i class="icon ion-ios-people">&nbsp;&nbsp;&nbsp;</i> 
@@ -39,9 +46,20 @@
   <div class="dashboard-middle-selector">
     <span><img ng-src="/components/pagesStyle/img/charts.svg" /></span>
     <span ng-click="openIceBox()"><img ng-src="/components/pagesStyle/img/icebox.svg" /></span>
-    <span><img ng-src="/components/pagesStyle/img/cart.svg" /></span>
+    <span ng-click="checkOut()"><img ng-src="/components/pagesStyle/img/cart.svg" /></span>
   </div>
 
+  <!-- <div ng-show="showfuck" style="position:absolute;width:100%;height:200px;background:tomato;z-index:20000;"> -->
+  <!-- <div ng-show="showfuck" id="bill"> -->
+  <div id="bill">
+    <div ng-show="uiBillShow">
+      <h5>big fuck</h5>
+      <h5>big fuck</h5>
+      <h5>big fuck</h5>
+      <h5>big fuck</h5>
+    </div>
+  </div>
+ 
   <!-- <button class="button" data-dialog="somedialog" class="trigger">我买xx</button> -->
   <div class="shop-box">
     <div class="swipegory">
@@ -75,15 +93,8 @@
 
 
 <script>
-  // (function() {
 
-  //   var dlgtrigger = document.querySelector( '[data-dialog]' );
-  //   // var dlgtrigger = document.getElementById("fuckme");
-  //   var somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) );
-  //   var dlg = new DialogFx( somedialog );
-  //   dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
-  // })();
+$('.ui.modal').modal();
 
 //swipers :js, for me it's durty code
 var autoAdjustHeight = false;

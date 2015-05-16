@@ -16,7 +16,26 @@ angular
   	// 	var view = new supersonic.ui.View("example#wave-test");
   	// 	supersonic.ui.layers.push(view);
   	// }
-    
+
+  	self.uiBillShow = false
+  	
+  	self.checkOut = function(){
+  		if(self.uiBillShow) {
+  			$("#bill").animate({height:"0px"}, 300);
+  			self.uiBillShow = !self.uiBillShow;
+  			// $("#bill").animate({height:'0px'},100, function(){
+  			// 	self.uiBillShow = !self.uiBillShow
+  			// }
+  		} else {
+  			$("#bill").animate({height:"200px"}, 300);
+  			self.uiBillShow = !self.uiBillShow;
+  			// $("#bill").animate({height:'200px'},100, function(){
+  			// 	self.uiBillShow = !self.uiBillShow
+  			// })
+  		}
+
+  	}
+
   	self.openIceBox = function(){
   		supersonic.ui.drawers.open("left").then( function() {
   			supersonic.logger.debug("Drawer was shown");
