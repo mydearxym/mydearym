@@ -1,3 +1,6 @@
   .left{float:left;}
   .right{ float:right;}
   .clearfix{clear:both;}
+  .margin-top-30 {
+    margin-top:30px;
+  }
