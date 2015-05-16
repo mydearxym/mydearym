@@ -14,16 +14,53 @@
 
 }
 
-#option_panel {
-  width: 100%;
-  height: 30%;
-  z-index:20001;
-  background: tomato !important;
+#dash-weight {
   position: fixed;
-
+  z-index:20002;
+  height: 30%;
+  width:100%;
   bottom:0px;
 }
 
+#buy_panel {
+  width: 100%;
+  height: 0;
+  z-index:25000;
+  background: white !important;
+  position: fixed;
+  
+  --webkit-opacity:.9;
+  opacity: .9;
+  bottom:0px;
+  left:0px;
+  -webkit-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+  -moz-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+  box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+}
+
+#option_panel {
+  width: 100%;
+  height: 0;
+  z-index:20001;
+  background: white !important;
+  position: fixed;
+  --webkit-opacity:.9;
+  opacity: .9;
+  bottom:0px;
+  
+  -webkit-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+  -moz-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+  box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+}
+
+#option_panel h4 {
+  color: grey !important;
+  text-align: center;
+}
+
+#calcular-icon {
+  /*background: url('/components/pagesStyle/img/calcular.svg');*/
+}
 
 </style>
 
@@ -64,10 +101,10 @@
   <!-- <div ng-show="showfuck" id="bill"> -->
   <div id="bill">
     <div ng-show="uiBillShow">
-      <h5>big fuck</h5>
-      <h5>big fuck</h5>
-      <h5>big fuck</h5>
-      <h5>big fuck</h5>
+      <!-- <h5>big fuck</h5> -->
+      <!-- <h5>big fuck</h5> -->
+      <!-- <h5>big fuck</h5> -->
+      <!-- <h5>big fuck</h5> -->
     </div>
   </div>
  
@@ -80,13 +117,14 @@
           <li><a href="#item2">水果#######</a></li>
           <li><a href="#item3">肉类</a></li>
           <li><a href="#item4">饮料</a></li>
-
         </ul>
       </nav>
 
       <ul class="panes">
-
-        <div class="dashboard-avatar-img">
+        <button ng-click="optionPanel()"></button>
+        <button ng-click="switchBottomPanel()"></button>
+        
+        <div ng-click="optionPanel()" class="dashboard-avatar-img shop_item">
           <img ng-src="/components/pagesStyle/img/test.svg" />
         </div>
         <li style="height:200px;"></li>
@@ -100,18 +138,52 @@
   </div><!--shop-box-->
 
   <div id="option_panel" >
+    <div class="row">
+      <div class="col col-50" style="border-right: 1px dashed grey;">
+        <h4><i class="icon ion-fork"></i>查菜谱</h4>
+        <div id="recipeQuery" style="width:70%;margin-left:18%;" ng-click="recipeQuery()">
+          <img ng-src="/components/pagesStyle/img/recipe.svg" />
+        </div>
+      </div>
+      
+      <div class="col col-50">
+        <h4><i class="icon ion-ios-book-outline"></i>记个账</h4>
+        <div id="calcular-icon" ng-click="calculateQuery()" style="width:58%;margin-left:22%;">
+          <img ng-src="/components/pagesStyle/img/calcular.svg" />
+        </div>
 
+    </div>
+
+    <div id="buy_panel" >
+      <div class="row">
+        <div class="col col-50" style="border-right: 1px dashed grey;">
+          <h4><i class="icon ion-fork"></i>有多重</h4>
+
+        </div>
+      
+        <div class="col col-50">
+          <h4><i class="icon ion-ios-book-outline"></i>多少钱</h4>
+
+        </div>
+      </div>
+    </div>
+
+  </div> <!--row-->
+<!--   <div id="dash-weight">
+    <h5>dash weigth</h5>
+    <h5>dash weigth</h5>
+    <h5>dash weigth</h5>
 
   </div>
-
+ -->
+  </div> <!--option_panel-->
 
   <div id="mailMan"></div>
+
 </div><!-- /container -->
 
 
 <script>
-
-$('.ui.modal').modal();
 
 //swipers :js, for me it's durty code
 var autoAdjustHeight = false;
