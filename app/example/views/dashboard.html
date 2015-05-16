@@ -9,7 +9,10 @@
 
 <div class="container" ng-controller="DashboardController">
   <div>
-    <span class="left dashboard-famliy-icon "><i class="icon ion-ios-people"></i></span>
+    <span class="left dashboard-famliy-icon" id="dashboard-family" ng-click="goToFamily()">
+      <i class="icon ion-ios-people"></i> 
+    </span>
+    
     <div class="right" id="dashboard-recommend" ng-click="goToRecomment()">
       <img ng-src="/components/pagesStyle/img/forks.svg" />
     </div>
@@ -60,10 +63,10 @@
   <div id="mailMan"></div>
 </div><!-- /container -->
 
+
 <script>
-
-  var autoAdjustHeight = false;
-
+//swipers :js, for me it's durty code
+var autoAdjustHeight = false;
 $('nav a').on('mousedown', function(e){
   e.preventDefault();
   var goTo = $(this).parent().index();  
