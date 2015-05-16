@@ -2,8 +2,14 @@ angular
   .module('example')
   .controller('DashboardController', function($scope, supersonic, $timeout) {
   	var self = $scope;
-
   	self.navbarTitle = "UI 测试哈"
+
+  	var iceBoxOpts = {
+  		side: "left",
+  		width: 250
+  	}
+
+  	supersonic.ui.drawers.init("example#ice-box", iceBoxOpts);
 
   	// self.submit = function(){
    //    supersonic.logger.warn("get submit: ")
@@ -11,6 +17,13 @@ angular
   	// 	supersonic.ui.layers.push(view);
   	// }
   
+  	self.openIceBox = function(){
+  		supersonic.ui.drawers.open("left").then( function() {
+  			supersonic.logger.debug("Drawer was shown");
+  		});
+
+  	}
+
   	self.goToRecomment = function(){
   		$timeout(function(){
   			var view = new supersonic.ui.View("example#recommend-page");
