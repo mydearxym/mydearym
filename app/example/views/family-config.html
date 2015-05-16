@@ -1,15 +1,67 @@
+<link rel="stylesheet" href="/components/powerange/dist/powerange.css" />
+<script src="/components/powerange/dist/powerange.min.js"></script>
+
+
+<style>
+	.weight-font {
+		text-align: center;
+		font-size: xx-large;
+		background: rgb(152, 222, 247);
+		color:white;
+	}
+
+	.birthday-title{
+		text-align: center;
+		background: rgb(129, 203, 70);
+		color:white;
+	}
+
+	.height-font {
+		text-align: center;
+		font-size: xx-large;
+		background: rgb(239, 205, 143);
+		color:white;
+	}
+
+</style>
+
 
 <div ng-controller="FamilyController">
-	<h3>family-config</h3>
 
+	<div class="row">
+		<div class="col col-30 weight-font">75</div>
+		<div class="col col-30 birthday-title">生日</div>
+		<div class="col col-30 height-font">172</div>
+	</div>
+
+	<hr>
 	<div class="ui buttons">
 		<div class="ui button" ng-click="hideModal()">Cancel</div>
 		<div class="or"></div>
 		<div class="ui positive button">Save</div>
 	</div>
 
+	<hr>
+	
+	<div class="slider-wrapper" style="width:80%;margin-left:10%;">
+		<input type="text" class="js-min-max-start" />
+	</div>
 
 </div>
+
+<script>
+	var vals = document.querySelector('.js-min-max-start');
+	var initVals = new Powerange(vals, { min: 16, max: 256, start: 128 });
+	var init = new Powerange(elem, { min: 16, max: 256, start: 128 });
+
+
+</script>
+
+
+
+
+
+
 
 
 

@@ -30,7 +30,6 @@ angular
       supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
       console.log("@dashboard:swiper:goto: ", data)
   	})
-
   })
 
 .controller("FamilyController", function($scope, supersonic, $timeout){
