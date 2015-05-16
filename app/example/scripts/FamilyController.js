@@ -6,10 +6,12 @@ angular
 
 	self.hideModal = function() {
 		console.log("hideModal");
-		var options = {
-			animate: true
-		}
-		supersonic.ui.modal.hide(options);
+		$timeout(function(){
+			var options = {
+				animate: true
+			}
+			supersonic.ui.modal.hide(options);
+		})
 	}
 })
 

@@ -35,6 +35,7 @@ angular
 //init the animation staff
 $(function(){
 	var animationName = "animated rubberBand";
+	var animationName2 = "animated jello";
 	var animationEnd  = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	//todo: change it to touchstart
@@ -48,7 +49,7 @@ $(function(){
 	$("#dashboard-family").on("touchstart", function(){
 		var that = $(this);
 		that.addClass(animationName).one(animationEnd, function(){
-			that.removeClass(animationName)
+			that.removeClass(animationName2)
 		})
 	})
 
