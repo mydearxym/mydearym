@@ -21,13 +21,17 @@ angular
   	
   	self.checkOut = function(){
   		if(self.uiBillShow) {
-  			$("#bill").animate({height:"0px"}, 300);
+  			// $("#bill").animate({height:"0px"}, 300);
+  			$("#bill").velocity({height:"0px"}, 200);
+  			
   			self.uiBillShow = !self.uiBillShow;
   			// $("#bill").animate({height:'0px'},100, function(){
   			// 	self.uiBillShow = !self.uiBillShow
   			// }
   		} else {
-  			$("#bill").animate({height:"200px"}, 300);
+  			// $("#bill").animate({height:"200px"}, 300);
+  			$("#bill").velocity({height:"200px"}, 200);
+  			
   			self.uiBillShow = !self.uiBillShow;
   			// $("#bill").animate({height:'200px'},100, function(){
   			// 	self.uiBillShow = !self.uiBillShow
