@@ -82,7 +82,6 @@
       <img ng-src="/components/pagesStyle/img/forks.svg" />
     </div>
   </div>
-
   <div class="clearfix"></div>
   <br>
   
@@ -97,18 +96,12 @@
     <span ng-click="checkOut()"><img ng-src="/components/pagesStyle/img/cart.svg" /></span>
   </div>
 
-  <!-- <div ng-show="showfuck" style="position:absolute;width:100%;height:200px;background:tomato;z-index:20000;"> -->
-  <!-- <div ng-show="showfuck" id="bill"> -->
+
   <div id="bill">
     <div ng-show="uiBillShow">
-      <!-- <h5>big fuck</h5> -->
-      <!-- <h5>big fuck</h5> -->
-      <!-- <h5>big fuck</h5> -->
-      <!-- <h5>big fuck</h5> -->
     </div>
   </div>
- 
-  <!-- <button class="button" data-dialog="somedialog" class="trigger">我买xx</button> -->
+  
   <div class="shop-box">
     <div class="swipegory">
       <nav>
@@ -121,23 +114,39 @@
       </nav>
 
       <ul class="panes">
-        <button ng-click="optionPanel()"></button>
-        <button ng-click="switchBottomPanel()"></button>
+        <button ng-click="optionPanel()">open</button>
+        <button ng-click="switchBottomPanel()">switch</button>
+
+        <!-- <div ng-click="optionPanel()" class="dashboard-avatar-img shop_item"> -->
+        <button class="button shop_item">item</button>
         
-        <div ng-click="optionPanel()" class="dashboard-avatar-img shop_item">
-          <img ng-src="/components/pagesStyle/img/test.svg" />
+        <div class="row">
+          <div class="col col-33"  ng-click="optionPanel()">
+            <div  class="shop_item" style="width:100%;">
+              <img ng-src="/components/pagesStyle/img/fruits/avocado.jpg" />
+              <button>hello?</button>
+            </div>
+          
+          </div>
+        
+          <div class="col col-33" ng-click="checkShopItem()">
+            <img ng-src="/components/pagesStyle/img/fruits/avocado.jpg" />
+          </div>
+        
+          <div class="col col-33" ng-click="checkShopItem()">
+            <img ng-src="/components/pagesStyle/img/fruits/avocado.jpg" />
+          </div>
         </div>
-        <li style="height:200px;"></li>
-        <li style="height:200px;"></li>
-        <li style="height:200px;"></li>
-        <li style="height:200px;"></li>
-        
+
+        <li style="height:300px;"></li>
+        <li style="height:300px;"></li>
+        <li style="height:300px;"></li>
+        <li style="height:300px;"></li>
       </ul>
     </div>
-
   </div><!--shop-box-->
 
-  <div id="option_panel" >
+  <div id="option_panel">
     <div class="row">
       <div class="col col-50" style="border-right: 1px dashed grey;">
         <h4><i class="icon ion-fork"></i>查菜谱</h4>
@@ -151,7 +160,7 @@
         <div id="calcular-icon" ng-click="calculateQuery()" style="width:58%;margin-left:22%;">
           <img ng-src="/components/pagesStyle/img/calcular.svg" />
         </div>
-
+      </div>
     </div>
 
     <div id="buy_panel" >
@@ -167,15 +176,6 @@
         </div>
       </div>
     </div>
-
-  </div> <!--row-->
-<!--   <div id="dash-weight">
-    <h5>dash weigth</h5>
-    <h5>dash weigth</h5>
-    <h5>dash weigth</h5>
-
-  </div>
- -->
   </div> <!--option_panel-->
 
   <div id="mailMan"></div>
@@ -239,7 +239,8 @@ $("ul.panes").swipe({
     $("#mailMan").trigger("dashboard:swiper:goto", [goTo])
   
   },
-  threshold: 50,
+  // threshold: 50,
+  threshold: 20,
   triggerOnTouchEnd: false,
   allowPageScroll: "vertical",
   excludedElements: "button, input, select, textarea, .noSwipe"
@@ -298,7 +299,7 @@ function swipegoryUpdate(goTo) {
         pane.addClass('after');
       }
     });    
-}
+  }
 }
 
 

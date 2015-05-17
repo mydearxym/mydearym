@@ -1,5 +1,6 @@
 .DS_Store
 /dist
+.idea
 node_modules
 bower_components/jquery
 bower_components/semantic-ui

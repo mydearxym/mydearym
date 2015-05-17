@@ -105,6 +105,17 @@ angular
   		// supersonic.logger.warn("calculateComfirm");
   	}
 
+  	self.checkShopItem = function() {
+  		// var options = {
+  		// 	message: "checkShopItem",
+  		// 	buttonLabel: "Close"
+  		// };
+
+  		// supersonic.ui.dialog.alert("Custom title!", options).then(function() {
+  		// 	supersonic.logger.log("Alert closed.");
+  		// });
+
+  	}
 
   	self.openIceBox = function(){
   		supersonic.ui.drawers.open("left").then( function() {
@@ -161,6 +172,12 @@ $(function(){
 		})
 	})
 
+	$(".shop_item").on("click", function(){
+		var that = $(this);
+		that.addClass(animationName).one(animationEnd, function(){
+			that.removeClass(animationName);
+		})
+	})
 
 })
 
