@@ -1,8 +1,78 @@
 angular
+  // .module('example', ['angular-velocity'])
   .module('example')
-  .controller('DashboardController', function($scope, supersonic, $timeout) {
+  
+  .controller('DashboardController', function($scope, supersonic, $timeout, $http) {
   	var self = $scope;
   	self.navbarTitle = "UI 测试哈"
+
+  	jQuery("#mailMan").on("dashboard:swiper:goto", function(e, data){
+      supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
+      console.log("@dashboard:swiper:goto: ", data)
+      if(parseInt(data) == 0) {
+      	self.curItems = self.curItemsP
+      } else if (parseInt(data) == 1){
+      	self.curItems = self.curItemsN
+      }
+      $(".fuckyou").velocity("transition.expandIn", {duration: 250})
+  	})
+
+  	self.curItemsP = [
+  	  {
+  	  	name: "鳄梨p",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨2p",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨4p",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨5p",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨6p",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  }
+  	]
+
+  	self.curItemsN = [
+  	  {
+  	  	name: "鳄梨1n",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨2n",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨4n",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨5n",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  },
+
+  	  {
+  	  	name: "鳄梨6n",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  }
+  	]
+
+  	self.curItems = self.curItemsP
+
 
   	var iceBoxOpts = {
   		side: "left",
@@ -19,6 +89,9 @@ angular
   		} else {
   			$("#bill").velocity({height:"200px"}, 200);
   			self.uiBillShow = !self.uiBillShow;
+
+  			 $(".YM_Bill").velocity("transition.slideRightIn", { stagger: 100, duration: 250 })
+
   		}
   	}
 
@@ -136,12 +209,8 @@ angular
   		}
   		supersonic.ui.modal.show(modalView, options);
   	}
+  
 
-
-  	jQuery("#mailMan").on("dashboard:swiper:goto", function(e, data){
-      supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
-      console.log("@dashboard:swiper:goto: ", data)
-  	})
   })
 
 //init the animation staff
@@ -173,10 +242,14 @@ $(function(){
 	})
 
 
-	$(".shop_item").on("click", function(){
-		// $(this).velocity("callout.pulse", {duration: 300});
+	$(document).on("click", ".shop_item", function(){
 		$(this).velocity("callout.pulse", {duration: 300});
+
 	})
+
+	// $(".shop_item").on("click",'a', function(){
+		// $(this).velocity("callout.pulse", {duration: 300});
+	// })
 
 	// $(".shop_item").on("click", function(){
 	// 	var that = $(this);

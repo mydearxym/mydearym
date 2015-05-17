@@ -39,7 +39,7 @@
   <script src="/components/velocity/velocity.min.js"></script>
   <script src="/components/velocity/velocity.ui.min.js"></script>
   
-  <script src="/components/angular-velocity/angular-velocity.min.js"></script>
+  <!-- // <script src="/components/angular-velocity/angular-velocity.min.js"></script> -->
 
 
 <!--   <link rel="stylesheet" href="/components/odometer/odometer-theme-default.css" />
@@ -55,9 +55,13 @@
  -->
   <!-- FullForm end -->
   
+  <script src="/components/angular-animate/angular-animate.js"></script>
+  <script src="/components/angular-velocity/angular-velocity.min.js"></script>
+  
   <% _.each(yield.modules, function(module) { %>
   <script src="/app/<%= module %>.js"></script>
   <% }); %>
+
 </head>
 <body ng-app="<%= yield.moduleName %>">
 
