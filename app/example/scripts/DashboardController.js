@@ -172,12 +172,18 @@ $(function(){
 		})
 	})
 
+
 	$(".shop_item").on("click", function(){
-		var that = $(this);
-		that.addClass(animationName).one(animationEnd, function(){
-			that.removeClass(animationName);
-		})
+		// $(this).velocity("callout.pulse", {duration: 300});
+		$(this).velocity("callout.pulse", {duration: 300});
 	})
+
+	// $(".shop_item").on("click", function(){
+	// 	var that = $(this);
+	// 	that.addClass(animationName).one(animationEnd, function(){
+	// 		that.removeClass(animationName);
+	// 	})
+	// })
 
 })
 
