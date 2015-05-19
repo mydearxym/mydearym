@@ -4,10 +4,6 @@
 <script src="/components/odometer/odometer.min.js"></script>
 
 <style>
-	body {
-		background: white !important;
-	}
-
 	.weight-font {
 		text-align: center;
 		font-size: xx-large;
@@ -28,81 +24,49 @@
 		color:white;
 	}
 
-	.famliy-avatar {
-		/*width:100% !important; */
-		background-color:rgb(220, 219, 216);
-		border-radius:50%;
-		padding:8px;
-		/*padding-bottom:0px;*/
-	}
-
-	/*.btn-group */
-	.btngroup {
-		font-size: 0;
-		line-height: 1;
-		white-space: nowrap;
-		display: inline;
-	}
-	.btngroup--btn {
-		font-size: 1rem;
-		letter-spacing: .1em;
-		background: transparent;
-		border: 2px solid #7f8c8d;
-		border-left-width: 0;
-		display: inline-block;
-		padding: .5em 1.25em;
-	}
-	.btngroup--btn:first-child {
-		border-left-width: 2px;
-		border-radius: 2em 0 0 2em;
-	}
-	.btngroup--btn:last-child {
-		border-radius: 0 2em 2em 0;
-	}
-
-
 </style>
 
 
 <div ng-controller="FamilyController">
 
-<super-navbar>
-<super-navbar-title>
-<i class="icon ion-ios-cloud-outline"></i>家庭成员
-</super-navbar-title>
-
-<super-navbar-button side="right"> <i class="icon ion-ios-cloud-outline"></i></super-navbar-button>
-</super-navbar>
-
-
 	<div class="row">
-		<div class="col col-33">
-			<div class="famliy-avatar">
-				<img  style="width:100%;" ng-src="/components/pagesStyle/img/famliy/father.svg" />
-				
-				<!-- wori -->
-				<!-- <button  class="shop_item shop_item_btn">{{item.name}}</button> -->
-			</div>
-
-		</div>
-		
-		<div class="col">
-			<div>
-				<span class="btngroup">
-					<button class="btngroup--btn">I like</button>
-					<button class="btngroup--btn">big</button>
-					<button class="btngroup--btn">buttons</button>
-					
-				</span>
-				
-			</div>
-
-		</div>
-		
+		<div class="col col-30 weight-font odometer">75</div>
+		<div class="col col-30 birthday-title">生日</div>
+		<div class="col col-30 height-font odometer">172</div>
 	</div>
 
+	<br>
+	<br>
+	
+	<div class="row row-center">
+		<div class="col">.col</div>
+		<div class="col">.col</div>
+		<div class="col">
+				<div class="slider-wrapper vertical-wrapper" style="height:200px;">
+					<input type="text" class="height-selector" />
+					<!-- <h3>height is: <span id="show_weight"></span>cm</h3> -->
+				</div>
+		</div>
+	</div>
 
+	<br>
+	<br>
+	<div class="ui buttons">
+		<div class="ui button" ng-click="hideModal()">Cancel</div>
+		<div class="or"></div>
+		<div class="ui positive button">Save</div>
+	</div>
 
+	<hr>
+	
+	<div class="slider-wrapper" style="width:80%;margin-left:10%;">
+		<input type="text" class="weight-selector" />
+		
+		<h3>weight is: <span id="show_weight"></span>kg</h3>
+
+	</div>
+
+</div>
 
 <script>
 

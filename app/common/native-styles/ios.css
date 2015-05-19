@@ -36,14 +36,22 @@ tab-bar tab-bar-item {
 
 tab-bar tab-bar-item:selected {
   color: #1596f7;
+  /*border-top: 2px solid #1596f7;*/
 }
 
 tab-bar-item#settings {
   background-image: url(icons/cog.svg);
 }
 
+tab-bar-item#family {
+  background-image: url(icons/cog.svg);
+}
+
+
 tab-bar-item#index {
   background-image: url(icons/home.svg);
+  /*background-image: url(icons/home_test3.png);*/
+  /*background-image: url(icons/search.svg);*/
 }
 
 tab-bar-item#internet {
