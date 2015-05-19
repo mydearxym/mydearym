@@ -1,6 +1,6 @@
 angular
   // .module('example', ['angular-velocity'])
-  .module('example', [])
+  .module('example', ["ngAnimate"])
   
   .controller('DashboardController', function($scope, supersonic, $timeout, $http) {
   	var self = $scope;
