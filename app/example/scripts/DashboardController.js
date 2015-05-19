@@ -1,6 +1,6 @@
 angular
   // .module('example', ['angular-velocity'])
-  .module('example')
+  .module('example', [])
   
   .controller('DashboardController', function($scope, supersonic, $timeout, $http) {
   	var self = $scope;
@@ -14,7 +14,9 @@ angular
       } else if (parseInt(data) == 1){
       	self.curItems = self.curItemsN
       }
+      
       $(".fuckyou").velocity("transition.expandIn", {duration: 250})
+      // $(".shop_item").velocity("transition.expandIn", { stagger: 50})
   	})
 
   	self.curItemsP = [
