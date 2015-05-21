@@ -5,6 +5,7 @@
 
 <style>
 	body {
+		/*background: rgb(246, 240, 224) !important;*/
 		background: white !important;
 	}
 
@@ -30,7 +31,7 @@
 
 	.famliy-avatar {
 		/*width:100% !important; */
-		background-color:rgb(220, 219, 216);
+		background-color:rgb(247, 232, 188);
 		border-radius:50%;
 		padding:8px;
 		/*padding-bottom:0px;*/
@@ -44,13 +45,15 @@
 		display: inline;
 	}
 	.btngroup--btn {
+		color:grey;
 		font-size: 1rem;
 		letter-spacing: .1em;
 		background: transparent;
-		border: 2px solid #7f8c8d;
+		border: 1px solid #7f8c8d;
 		border-left-width: 0;
 		display: inline-block;
-		padding: .5em 1.25em;
+		/*padding: .2em 1.25em;*/
+		padding: .2em 1em;
 	}
 	.btngroup--btn:first-child {
 		border-left-width: 2px;
@@ -58,6 +61,72 @@
 	}
 	.btngroup--btn:last-child {
 		border-radius: 0 2em 2em 0;
+	}
+
+	.unit_font {
+		color: rgb(194, 157, 62);
+		font-size:medium;
+		padding-left:3px;
+	}
+
+	.body_thumb_left {
+		font-weight:bold;color:white;background-color:tomato;border-radius:6px;margin-left:30%;text-align:center;
+	}
+
+	.body_thumb_right {
+		font-weight:bold;color:white;background-color:rgb(241, 181, 75);border-radius:6px;margin-right:30%;text-align:center;
+	}
+
+	#body_config_panel {
+		width: 100%;
+		height: 0px;
+		z-index:20001;
+		background: white !important;
+		position: fixed;
+		--webkit-opacity:.9;
+		opacity: .9;
+		bottom:0px;
+  
+		-webkit-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+		-moz-box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+		box-shadow: 0px -2px 30px -8px rgba(0,0,0,0.59);
+	}
+
+	.ill_selector {
+		margin-left:3%;
+		margin-left:5%;
+		color:white;
+		font-weight:bold;
+		padding-left:5px;
+		border-radius: 6px;
+		margin-bottom:5px;
+		padding-top:3px;
+		padding-bottom:3px;
+	}
+
+	.ill_selector.level_1 {
+		background: #EAB200 !important;
+	}
+	.ill_selector.level_2 {
+		background: #EA8500 !important;
+	}
+	.ill_selector.level_3 {
+		background: #EA7C00 !important;
+	}
+	.ill_selector.level_4 {
+		background: #EA6B00 !important;
+	}
+	.ill_selector.level_5 {
+		background: #EA3E00 !important;
+	}
+	.ill_selector.level_6 {
+		background: #EA7C00 !important;
+	}
+	.ill_selector.level_7 {
+		background: tomato !important;
+	}
+	.ill_selector.level_8 {
+		background: #EAB200 !important;
 	}
 
 
@@ -75,7 +144,7 @@
 </super-navbar>
 
 
-	<div class="row">
+	<div class="row" style="border-bottom:1px solid grey;">
 		<div class="col col-33">
 			<div class="famliy-avatar">
 				<img  style="width:100%;" ng-src="/components/pagesStyle/img/famliy/father.svg" />
@@ -87,22 +156,88 @@
 		</div>
 		
 		<div class="col">
-			<div>
+			<div style="text-align:center;">选择饮食模式</div>
+			<div style="margin-left:5%;margin-top:5px;margin-bottom:2px;">
 				<span class="btngroup">
-					<button class="btngroup--btn">I like</button>
-					<button class="btngroup--btn">big</button>
-					<button class="btngroup--btn">buttons</button>
-					
+					<button class="btngroup--btn">减肥</button>
+					<button class="btngroup--btn">成长</button>
+					<button class="btngroup--btn">养生</button>
 				</span>
-				
+			</div>
+
+			<!-- sd http://localhost/app/example/family-config.html -->
+			<!-- <div style="text-align:center; border-bottom:1px solid grey;"> -->
+			<div style="text-align:center;">
+				<div class="row" ng-click="toggleBodyPanel()">
+					<div class="col" style="text-align:right;">
+						<span><span style="font-size:large;color:grey;">74</span><span class="unit_font">kg</span></span>
+						<div class="body_thumb_left">高血压</div>
+					</div>
+					
+					<div class="col col-20">
+						<!-- <span> -->
+							<img style="width:100%;height:45px;" ng-src="/components/pagesStyle/img/famliy/father-all.svg" />
+						<!-- </span> -->
+					</div>
+
+					<div class="col" style="text-align:left;">
+						<span><span style="font-size:large;color:grey;">172</span><span class="unit_font">cm</span></span>
+						<div class="body_thumb_right">胃痛</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div id="body_config_panel">
+		<div>
+			<span ng-click="toggleBodyPanel()" class="right x-large positive"><i class="icon ion-ios-close-outline"></i></span>
+		</div>
+
+		<div class="row">
+			<div class="col col-30">
+				<div class="ill_selector level_1">感冒</div>
+				<div class="ill_selector level_2">恶心呕吐</div>
+				<div class="ill_selector level_3">白内障<span class="right"><i class="icon ion-android-done"></i></span></div>
+				<div class="ill_selector level_4">支气管炎</div>
+				<div class="ill_selector level_5">高血压</div>
+				<div class="ill_selector level_6">糖尿病</div>
+				<div class="ill_selector level_7">胃病</div>
+				<div class="ill_selector level_8">乳腺癌</div>
+			</div>
+
+			<div class="col col-30">
+				<!-- <span><img style="width:100%;height:100%" ng-src="/components/pagesStyle/img/famliy/father-all.svg" /></span> -->
+				<img style="width:100%;height:220px;" ng-src="/components/pagesStyle/img/famliy/father-all.svg" />
+			</div>
+
+			<div class="col col-10">
+				<div class="slider-wrapper vertical-wrapper" style="height:200px;">
+					<input type="text" class="height-selector" />
+				</div>
+				<!-- <img style="width:100%;height:200px;" ng-src="/components/pagesStyle/img/ruler.png" /> -->
+			</div>
+			<!-- 身高选择 -->
+			<div class="col col-10">
+				<img style="width:100%;" ng-src="/components/pagesStyle/img/ruler.png" />
 			</div>
 
 		</div>
 		
+		<div class="row">
+			<div class="col">
+				<div class="slider-wrapper" style="width:80%;margin-left:10%;margin-bottom:5px;">
+					<input type="text" class="weight-selector" />
+					<h3>weight is: <span id="show_weight"></span>kg</h3>
+				</div>
+				<h5 style="color:grey;">还有体重哦</h5>
+
+			</div><!--col-->
+		</div><!--row-->
+
 	</div>
-
-
-
 
 <script>
 

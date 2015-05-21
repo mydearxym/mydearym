@@ -68,6 +68,8 @@
   border-radius: 8px;
   border: 1px solid #F0F0F0;
   font-weight: bold;
+  padding-left:2px;
+  text-align:center;
 }
 
 .YM_Bill {
@@ -99,7 +101,7 @@
   </div>
   <div class="clearfix"></div>
   <br>
-  
+
   <div class="dashboard-avatar-img">
     <img ng-src="/components/pagesStyle/img/test.svg" />
   </div>
@@ -124,6 +126,7 @@
   
   <button ng-click="optionPanel()">open</button>
   <button ng-click="switchBottomPanel()">switch</button>
+  <button ng-click="imgClick()">imgclick</button>
 
   <div class="shop-box">
     <div class="swipegory">
@@ -141,7 +144,7 @@
         <br>
         <div class="ui page grid fuckyou">
           <div class="four wide column" ng-repeat="item in curItems">
-            <div  class="shop_item" style="width:100%;">
+            <div ng-click="imgClick()" class="shop_item" style="width:100%;">
               <img style="width:100%;" ng-src="{{item.imgsrc}}"/>
               <button  class="shop_item shop_item_btn">{{item.name}}</button>
             </div>

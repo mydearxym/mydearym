@@ -1,3 +1,5 @@
+'use strict'
+
 angular
   // .module('example', ['angular-velocity'])
   .module('example')
@@ -22,29 +24,59 @@ angular
   	self.curItemsP = [
   	  {
   	  	name: "鳄梨p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/eli.jpg"
   	  },
 
   	  {
-  	  	name: "鳄梨2p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  	name: "火龙果",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/huolongguo.jpg"
   	  },
 
   	  {
-  	  	name: "鳄梨4p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  	name: "桔子",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/juzi.jpg"
   	  },
 
   	  {
-  	  	name: "鳄梨5p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
+  	  	name: "李子",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/li3zi.jpg"
   	  },
 
   	  {
-  	  	name: "鳄梨6p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  }
-  	]
+  	  	name: "榴莲",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.jpg"
+  	  },
+  	
+      {
+        name: "香梨",
+        imgsrc: "/components/pagesStyle/img/fruits/lizi.jpg"
+      },
+
+      {
+        name: "猕猴桃",
+        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.jpg"
+      },
+      {
+        name: "木瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/mugua.jpg"
+      },
+      {
+        name: "柠檬",
+        imgsrc: "/components/pagesStyle/img/fruits/ningmeng.jpg"
+      }
+
+    ]
+
+    self.imgClick = function(){
+      var options = {
+       message: "iamge clicked",
+       buttonLabel: "Close"
+      };
+
+      supersonic.ui.dialog.alert("Custom title!", options).then(function() {
+       supersonic.logger.log("Alert closed.");
+      });
+    }
 
   	self.curItemsN = [
   	  {

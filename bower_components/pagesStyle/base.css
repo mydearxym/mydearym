@@ -2,5 +2,8 @@
   .right{ float:right;}
   .clearfix{clear:both;}
   .margin-top-30 {
-    margin-top:30px;
+  	margin-top:30px;
   }
+  .large {font-size:large;}
+  .x-large {font-size:x-large;}
+  .xx-large {font-size:xx-large;}

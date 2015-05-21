@@ -13,6 +13,8 @@ bower_components/webcomponentsjs
 bower_components/animate.css
 bower_components/odometer
 bower_components/velocity
+bower_components/moment/
+bower_components/angular-moment/
 bower_components/angular-velocity/
 bower_components/angular-animate/
 

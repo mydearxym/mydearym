@@ -17,7 +17,8 @@ module.exports =
     {
       title: "Internet"
       id: "internet"
-      location: "http://google.com" # URLs are supported!
+      # location: "http://google.com" # URLs are supported!
+      location: "http://apeatling.com/demos/web-ptr/" # URLs are supported!
     }
   ]
 
