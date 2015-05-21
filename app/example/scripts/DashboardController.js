@@ -10,22 +10,23 @@ angular
 
     supersonic.ui.tabs.hide();
 
-  	jQuery("#mailMan").on("dashboard:swiper:goto", function(e, data){
-      supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
-      console.log("@dashboard:swiper:goto: ", data)
-      if(parseInt(data) == 0) {
-      	self.curItems = self.curItemsP
-      } else if (parseInt(data) == 1){
-      	self.curItems = self.curItemsN
+    self.gotoShopPage = function(page) {
+      supersonic.ui.tabs.hide();
+      if("var" == page) {
+        self.curItems = self.curItemsVar
+      } else if("fruit" == page){
+        self.curItems = self.curItemsFruit
+      } else if("meat" == page){
+        self.curItems = self.curItemsMeat
+      } else { //wine
+        self.curItems = self.curItemsWine
       }
-      
-      $(".fuckyou").velocity("transition.expandIn", {duration: 250})
-      // $(".shop_item").velocity("transition.expandIn", { stagger: 50})
-  	})
+      $(".shop_items").velocity("transition.slideUpIn", {duration: 350, stagger:300})
+    }
 
-  	self.curItemsP = [
+  	self.curItemsVar = [
   	  {
-  	  	name: "柠檬",
+  	  	name: "蔬菜",
   	  	imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
   	  },
 
@@ -103,47 +104,269 @@ angular
         imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
       }
     ]
+    self.curItemsFruit = [
+      {
+        name: "柠檬",
+        imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
+      },
 
-    self.imgClick = function(){
-      var options = {
-       message: "iamge clicked",
-       buttonLabel: "Close"
-      };
+      {
+        name: "鳄梨",
+        imgsrc: "/components/pagesStyle/img/fruits/eli.png"
+      },
 
-      supersonic.ui.dialog.alert("Custom title!", options).then(function() {
-       supersonic.logger.log("Alert closed.");
-      });
+      {
+        name: "火龙果",
+        imgsrc: "/components/pagesStyle/img/fruits/huolongguo.png"
+      },
+
+      {
+        name: "桔子",
+        imgsrc: "/components/pagesStyle/img/fruits/juzi.png"
+      },
+
+      {
+        name: "榴莲",
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+      },
+
+      {
+        name: "李子",
+        imgsrc: "/components/pagesStyle/img/fruits/lizi.png"
+      },
+    
+      {
+        name: "香梨",
+        imgsrc: "/components/pagesStyle/img/fruits/lizireal.png"
+      },
+
+      {
+        name: "猕猴桃",
+        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.png"
+      },
+      {
+        name: "木瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/mugua.png"
+      },
+      
+      {
+        name: "苹果",
+        imgsrc: "/components/pagesStyle/img/fruits/pinguo.png"
+      },
+
+      {
+        name: "葡萄",
+        imgsrc: "/components/pagesStyle/img/fruits/putao.png"
+      },
+
+      {
+        name: "山竹果",
+        imgsrc: "/components/pagesStyle/img/fruits/shanzhuguo.png"
+      },
+
+      {
+        name: "桃子",
+        imgsrc: "/components/pagesStyle/img/fruits/taozi.png"
+      },
+
+      {
+        name: "香蕉",
+        imgsrc: "/components/pagesStyle/img/fruits/xiangjiao.png"
+      },
+
+      {
+        name: "西瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/xigua.png"
+      },
+
+      {
+        name: "椰子",
+        imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
+      }
+    ]
+
+    self.curItemsMeat = [
+      {
+        name: "肉类",
+        imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
+      },
+
+      {
+        name: "鳄梨",
+        imgsrc: "/components/pagesStyle/img/fruits/eli.png"
+      },
+
+      {
+        name: "火龙果",
+        imgsrc: "/components/pagesStyle/img/fruits/huolongguo.png"
+      },
+
+      {
+        name: "桔子",
+        imgsrc: "/components/pagesStyle/img/fruits/juzi.png"
+      },
+
+      {
+        name: "榴莲",
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+      },
+
+      {
+        name: "李子",
+        imgsrc: "/components/pagesStyle/img/fruits/lizi.png"
+      },
+    
+      {
+        name: "香梨",
+        imgsrc: "/components/pagesStyle/img/fruits/lizireal.png"
+      },
+
+      {
+        name: "猕猴桃",
+        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.png"
+      },
+      {
+        name: "木瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/mugua.png"
+      },
+      
+      {
+        name: "苹果",
+        imgsrc: "/components/pagesStyle/img/fruits/pinguo.png"
+      },
+
+      {
+        name: "葡萄",
+        imgsrc: "/components/pagesStyle/img/fruits/putao.png"
+      },
+
+      {
+        name: "山竹果",
+        imgsrc: "/components/pagesStyle/img/fruits/shanzhuguo.png"
+      },
+
+      {
+        name: "桃子",
+        imgsrc: "/components/pagesStyle/img/fruits/taozi.png"
+      },
+
+      {
+        name: "香蕉",
+        imgsrc: "/components/pagesStyle/img/fruits/xiangjiao.png"
+      },
+
+      {
+        name: "西瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/xigua.png"
+      },
+
+      {
+        name: "椰子",
+        imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
+      }
+    ]
+
+    self.curItemsWine = [
+      {
+        name: "酒类",
+        imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
+      },
+
+      {
+        name: "鳄梨",
+        imgsrc: "/components/pagesStyle/img/fruits/eli.png"
+      },
+
+      {
+        name: "火龙果",
+        imgsrc: "/components/pagesStyle/img/fruits/huolongguo.png"
+      },
+
+      {
+        name: "桔子",
+        imgsrc: "/components/pagesStyle/img/fruits/juzi.png"
+      },
+
+      {
+        name: "榴莲",
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+      },
+
+      {
+        name: "李子",
+        imgsrc: "/components/pagesStyle/img/fruits/lizi.png"
+      },
+    
+      {
+        name: "香梨",
+        imgsrc: "/components/pagesStyle/img/fruits/lizireal.png"
+      },
+
+      {
+        name: "猕猴桃",
+        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.png"
+      },
+      {
+        name: "木瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/mugua.png"
+      },
+      
+      {
+        name: "苹果",
+        imgsrc: "/components/pagesStyle/img/fruits/pinguo.png"
+      },
+
+      {
+        name: "葡萄",
+        imgsrc: "/components/pagesStyle/img/fruits/putao.png"
+      },
+
+      {
+        name: "山竹果",
+        imgsrc: "/components/pagesStyle/img/fruits/shanzhuguo.png"
+      },
+
+      {
+        name: "桃子",
+        imgsrc: "/components/pagesStyle/img/fruits/taozi.png"
+      },
+
+      {
+        name: "香蕉",
+        imgsrc: "/components/pagesStyle/img/fruits/xiangjiao.png"
+      },
+
+      {
+        name: "西瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/xigua.png"
+      },
+
+      {
+        name: "椰子",
+        imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
+      }
+    ]
+
+    self.toggleDashPanel = function(){
+      if(self.uiOptionPanelShow) {
+        $("#option_panel").velocity({height:"0"}, 200);
+        self.uiOptionPanelShow = !self.uiOptionPanelShow;
+      } else {
+        $("#option_panel").velocity({height:"26%"}, 200);
+        self.uiOptionPanelShow = !self.uiOptionPanelShow;
+      }
+
+      // var options = {
+      //  message: "iamge clicked",
+      //  buttonLabel: "Close"
+      // };
+
+      // supersonic.ui.dialog.alert("Custom title!", options).then(function() {
+      //  supersonic.logger.log("Alert closed.");
+      // });
     }
 
-  	self.curItemsN = [
-  	  {
-  	  	name: "鳄梨1n",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  },
-
-  	  {
-  	  	name: "鳄梨2n",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  },
-
-  	  {
-  	  	name: "鳄梨4n",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  },
-
-  	  {
-  	  	name: "鳄梨5n",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  },
-
-  	  {
-  	  	name: "鳄梨6n",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/avocado.jpg"
-  	  }
-  	]
-
-  	self.curItems = self.curItemsP
-
+    self.curItems = self.curItemsVar
 
   	var iceBoxOpts = {
   		side: "left",

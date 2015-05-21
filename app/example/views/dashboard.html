@@ -111,11 +111,11 @@
   <div class="mt10"></div>
   <div class="dashboard-middle-selector">
     <!-- <span><img ng-src="/components/pagesStyle/img/charts.svg" /></span> -->
-    <span><img ng-src="/components/pagesStyle/img/shop-var.svg" /></span>
-    <span><img ng-src="/components/pagesStyle/img/shop-fruit.svg" /></span>
+    <span ng-click="gotoShopPage('var')"><img ng-src="/components/pagesStyle/img/shop-var.svg" /></span>
+    <span ng-click="gotoShopPage('fruit')"><img ng-src="/components/pagesStyle/img/shop-fruit.svg" /></span>
     <span ng-click="checkOut()"><img style="width:15% !important;" ng-src="/components/pagesStyle/img/cart.svg" /></span>
-    <span><img ng-src="/components/pagesStyle/img/shop-meat.svg" /></span>
-    <span><img ng-src="/components/pagesStyle/img/shop-wine.svg" /></span>
+    <span ng-click="gotoShopPage('meat')"><img ng-src="/components/pagesStyle/img/shop-meat.svg" /></span>
+    <span ng-click="gotoShopPage('wine')"><img ng-src="/components/pagesStyle/img/shop-wine.svg" /></span>
     <!-- <span ng-click="openIceBox()"><img ng-src="/components/pagesStyle/img/icebox.svg" /></span> -->
     <!-- <span ng-click="checkOut()"><img ng-src="/components/pagesStyle/img/cart.svg" /></span> -->
   </div>
@@ -136,28 +136,18 @@
   
   <div class="shop_box">
     <div class="shop_box_top"></div>
-<!--     <div class="shop_body">
-      <div class="row">
-        <div class="col ">hello</div>
-        <div class="col">world</div>
-      </div>
-      <div class="shop_sep"></div>
-      <div class="row">
-        <div class="col">hello</div>
-        <div class="col">world</div>
-      </div>
-    </div>
- -->
     <br>
-    <div class="ui page grid fuckyou">
+    <div class="ui page grid shop_items">
       <div class="eight wide column shop-item-shadow" style="padding:0;" ng-repeat="item in curItems">
-        <div ng-click="imgClick()" class="" style="width:100%;">
+        <div ng-click="toggleDashPanel()" class="" style="width:100%;">
           <div class="row">
             <div class="col col-50">
               <img style="width:100%;" ng-src="{{item.imgsrc}}"/>
             </div>
             <div class="col col-50">
-              {{item.name}}
+              <div style="font-weight:bold;">{{item.name}}</div>
+              <div>参考价格:</div>
+              <span >￥1.56</span>
             </div>
 
           </div>
@@ -169,67 +159,48 @@
 
   </div>
 
-
-
-  <!-- <div class="shop-box">
-    <div class="swipegory">
-      <nav>
-        <ul>
-          <li><a href="#item1">###蔬菜####</a></li>
-          <li><a href="#item2">水果#######</a></li>
-          <li><a href="#item3">肉类</a></li>
-          <li><a href="#item4">饮料</a></li>
-        </ul>
-      </nav>
-
-      <ul class="panes">
-        
-        <br>
-        <div class="ui page grid fuckyou">
-          <div class="four wide column" ng-repeat="item in curItems">
-            <div ng-click="imgClick()" class="shop_item" style="width:100%;">
-              <img style="width:100%;" ng-src="{{item.imgsrc}}"/>
-              <button  class="shop_item shop_item_btn">{{item.name}}</button>
-            </div>
-          </div>
-        </div>
-    
-        <li style="height:300px;background-color:white;"></li>
-        <li style="height:300px;"></li>
-        <li style="height:300px;"></li>
-        <li style="height:300px;"></li>
-      </ul>
-    </div>
-  </div> -->
-
   <div id="option_panel">
     <div class="row">
-      <div class="col col-50" style="border-right: 1px dashed grey;">
+      <div class="col col-45" style="border-right: 1px dashed grey;">
         <h4><i class="icon ion-fork"></i>查菜谱</h4>
         <div id="recipeQuery" style="width:70%;margin-left:18%;" ng-click="recipeQuery()">
           <img ng-src="/components/pagesStyle/img/recipe.svg" />
         </div>
       </div>
       
-      <div class="col col-50">
+      <div class="col col-45">
         <h4><i class="icon ion-ios-book-outline"></i>记个账</h4>
         <div id="calcular-icon" ng-click="calculateQuery()" style="width:58%;margin-left:22%;">
           <img ng-src="/components/pagesStyle/img/calcular.svg" />
         </div>
       </div>
+
+      <div class="col col-10">
+        <div class="x-large"><i class="icon ion-ios-close-outline"></i></div>
+        <!-- <div class="xx-large"><i class="icon ion-ios-checkmark-outline"></i></div> -->
+      </div>
+
     </div>
 
     <div id="buy_panel" >
+      <div class="x-large"><span ng-click="switchBottomPanel()" class="right"><i class="icon ion-android-arrow-back"></i></span></div>
       <div class="row">
-        <div class="col col-50" style="border-right: 1px dashed grey;">
+        <div class="col col-33" style="border-right: 1px dashed grey;">
           <h4><i class="icon ion-fork"></i>有多重</h4>
 
         </div>
-      
-        <div class="col col-50">
-          <h4><i class="icon ion-ios-book-outline"></i>多少钱</h4>
+
+        <div class="col col-33" style="border-right: 1px dashed grey;">
+          <h4><i class="icon ion-fork"></i>保质期</h4>
 
         </div>
+
+      
+        <div class="col col-33">
+          <h4><i class="icon ion-ios-book-outline"></i>多少钱</h4>
+        </div>
+      
+
       </div>
     </div>
   </div> <!--option_panel-->
