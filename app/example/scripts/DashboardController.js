@@ -22,49 +22,49 @@ angular
       $(".fuckyou").velocity("transition.expandIn", {duration: 250})
       // $(".shop_item").velocity("transition.expandIn", { stagger: 50})
   	})
-
+    
   	self.curItemsP = [
   	  {
   	  	name: "鳄梨p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/eli.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
 
   	  {
   	  	name: "火龙果",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/huolongguo.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
 
   	  {
   	  	name: "桔子",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/juzi.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
 
   	  {
   	  	name: "李子",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/li3zi.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
 
   	  {
   	  	name: "榴莲",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.jpg"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
   	
       {
         name: "香梨",
-        imgsrc: "/components/pagesStyle/img/fruits/lizi.jpg"
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
       },
 
       {
         name: "猕猴桃",
-        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.jpg"
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
       },
       {
         name: "木瓜",
-        imgsrc: "/components/pagesStyle/img/fruits/mugua.jpg"
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
       },
       {
         name: "柠檬",
-        imgsrc: "/components/pagesStyle/img/fruits/ningmeng.jpg"
+        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
       }
 
     ]

@@ -120,17 +120,15 @@
     <!-- <span ng-click="checkOut()"><img ng-src="/components/pagesStyle/img/cart.svg" /></span> -->
   </div>
 
-
   <div id="bill">
     <div ng-show="uiBillShow">
       <div class="YM_Bill">dfjefjeflekfjeifj</div>
       <div class="YM_Bill">dfjefjeflekfjeifj</div>
       <div class="YM_Bill">dfjefjeflekfjeifj</div>
       <div class="YM_Bill">dfjefjeflekfjeifj</div>
-
     </div>
   </div>
-  
+
 <!--   <button ng-click="optionPanel()">open</button>
   <button ng-click="switchBottomPanel()">switch</button>
   <button ng-click="imgClick()">imgclick</button>
@@ -138,9 +136,40 @@
   
   <div class="shop_box">
     <div class="shop_box_top"></div>
-    <div class="shop_body"></div>
+<!--     <div class="shop_body">
+      <div class="row">
+        <div class="col ">hello</div>
+        <div class="col">world</div>
+      </div>
+      <div class="shop_sep"></div>
+      <div class="row">
+        <div class="col">hello</div>
+        <div class="col">world</div>
+      </div>
+    </div>
+ -->
+    <br>
+    <div class="ui page grid fuckyou">
+      <div class="eight wide column shop-item-shadow" style="padding:0;" ng-repeat="item in curItems">
+        <div ng-click="imgClick()" class="" style="width:100%;">
+          <div class="row">
+            <div class="col col-50">
+              <img style="width:100%;" ng-src="{{item.imgsrc}}"/>
+            </div>
+            <div class="col col-50">
+              {{item.name}}
+            </div>
+
+          </div>
+          <!-- <button  class="">{{item.name}}</button> -->
+
+        </div>
+      </div>
+    </div>
 
   </div>
+
+
 
   <!-- <div class="shop-box">
     <div class="swipegory">
