@@ -4,6 +4,11 @@
   .margin-top-30 {
   	margin-top:30px;
   }
+  .bold {font-weight:bold;}
+  .medium {font-size:medium;}
   .large {font-size:large;}
   .x-large {font-size:x-large;}
   .xx-large {font-size:xx-large;}
+  .pl20 {padding-left:20px;}
+  .pt5{padding-top:5px;}
+

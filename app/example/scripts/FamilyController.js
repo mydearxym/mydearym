@@ -5,7 +5,7 @@ angular
 	var self = $scope;
 
 	var uiBodyPanelDur = 200;
-	var uiBodyPanelHeight = "310px";
+	var uiBodyPanelHeight = "320px";
 	var uiBodyPanelId = "#body_config_panel";
 
 

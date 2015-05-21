@@ -128,7 +128,26 @@
 	.ill_selector.level_8 {
 		background: #EAB200 !important;
 	}
+	.weight_range .range-handle{
+		background-image: url(/components/pagesStyle/img/weight.svg);
+		opacity: 0.8;
+	}
+	.weight_range .range-bar {
+		background-image:-webkit-gradient(linear,0 50%,100% 50%,color-stop(0%,#e65d5b),color-stop(14%,#f3af32),color-stop(28%,#e6d168),color-stop(40%,#7bd369),color-stop(55%,#50c6a2),color-stop(70%,#a7d37c),color-stop(85%,#a7b958),color-stop(100%,#e35c57));
+		background-image:-webkit-gradient(linear,0 50%,100% 50%,color-stop(0%,#e65d5b),color-stop(14%,#f3af32),color-stop(28%,#e6d168),color-stop(40%,#7bd369),color-stop(55%,#50c6a2),color-stop(70%,#a7d37c),color-stop(85%,#a7b958),color-stop(100%,#e35c57));
+		background: linear-gradient(left,#e65d5b,#f3af32 14%,#e6d168 28%,#7bd369 40%,#50c6a2 55%,#a7d37c 70%,#a7b958 85%,#e35c57);
+	}
 
+	.height_range .range-handle{
+		/*background-image: url(/components/pagesStyle/img/height.svg);*/
+		opacity: 0.8;
+		color: tomato;
+	}
+
+
+	.height_range .range-bar{
+		/*background-color:transparent;*/
+	}
 
 </style>
 
@@ -193,7 +212,9 @@
 
 	<div id="body_config_panel">
 		<div>
-			<span ng-click="toggleBodyPanel()" class="right x-large positive"><i class="icon ion-ios-close-outline"></i></span>
+			<span class="left medium pl20 pt5 positive bold"><span class="cur_height">172</span>cm&nbsp;/&nbsp;<span class="cur_weight">74</span>kg</span>
+			<span ng-click="toggleBodyPanel()" class="right xx-large positive bold"><i class="icon ion-ios-close-outline"></i></span>
+			<span ng-click="toggleBodyPanel()" class="right xx-large positive bold"><i class="icon ion-ios-checkmark"></i></span>
 		</div>
 
 		<div class="row">
@@ -213,8 +234,8 @@
 				<img style="width:100%;height:220px;" ng-src="/components/pagesStyle/img/famliy/father-all.svg" />
 			</div>
 
-			<div class="col col-10">
-				<div class="slider-wrapper vertical-wrapper" style="height:200px;">
+			<div class="col col-10" style="padding-left:20px;padding-top:18px;">
+				<div class="slider-wrapper vertical-wrapper height_range" style="height:200px;">
 					<input type="text" class="height-selector" />
 				</div>
 				<!-- <img style="width:100%;height:200px;" ng-src="/components/pagesStyle/img/ruler.png" /> -->
@@ -228,11 +249,11 @@
 		
 		<div class="row">
 			<div class="col">
-				<div class="slider-wrapper" style="width:80%;margin-left:10%;margin-bottom:5px;">
+				<div class="slider-wrapper weight_range" style="width:80%;margin-left:10%;margin-bottom:5px;">
 					<input type="text" class="weight-selector" />
-					<h3>weight is: <span id="show_weight"></span>kg</h3>
+					<!-- <h3>weight is: <span id="show_weight"></span>kg</h3> -->
 				</div>
-				<h5 style="color:grey;">还有体重哦</h5>
+				<!-- <h5 style="color:grey;">还有体重哦</h5> -->
 
 			</div><!--col-->
 		</div><!--row-->
@@ -248,17 +269,16 @@
 	};
 
 	var weight_elem = document.querySelector('.weight-selector');
-	var weight_range = new Powerange(weight_elem, { 
+	var weight_range = new Powerange(weight_elem, {
 		min: 16, max: 120, start: 60, 
 		callback:weightChange });
 
 	function weightChange() {
 		console.log("weightChange: ", weight_elem.value)
 		// document.getElementById("show_weight").innerHTML = weight_elem.value;
-
-		// setTimeout(function(){
-		// 	$(".weight-font").html(weight_elem.value);
-		// },200)
+		setTimeout(function(){
+			$(".cur_weight").html(weight_elem.value);
+		},200)
 
 	}
 
@@ -266,22 +286,17 @@
 	var height_range = new Powerange(height_elem, {  
 		vertical: true, 
 		min:80, max:200, start: 160, 
+		hideRange: true,
 		callback:heightChange });
 
 	function heightChange() {
 		console.log("weightChange: ", height_elem.value)
 		// document.getElementById("show_weight").innerHTML = weight_elem.value;
-
-		// setTimeout(function(){
-		// 	$(".height-font").html(height_elem.value);
-		// },200)
-	
+		setTimeout(function(){
+			$(".cur_height").html(height_elem.value);
+		},200)
 
 	}
-
-
-
-
 </script>
 
 
