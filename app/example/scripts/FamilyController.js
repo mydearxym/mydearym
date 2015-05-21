@@ -25,9 +25,13 @@ angular
 		if(self.uiBodyPanelShow) {
 			$(uiBodyPanelId).velocity({height:"0"}, uiBodyPanelDur);
 			self.uiBodyPanelShow = !self.uiBodyPanelShow;
+			$timeout(function(){
+				supersonic.ui.tabs.show();
+			},500)
 		} else {
 			$(uiBodyPanelId).velocity({height: uiBodyPanelHeight}, uiBodyPanelDur);
 			self.uiBodyPanelShow = !self.uiBodyPanelShow;
+			supersonic.ui.tabs.hide();
 		}
 
 	}
