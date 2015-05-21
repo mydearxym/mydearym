@@ -4,9 +4,18 @@
 
   body {
     /*background: white;*/
-    background: rgb(240, 240, 240) !important;
+    background: rgb(246, 240, 224);
     color:#62706c;
     margin-top:-27px;
+  }
+
+  .shop_box{
+    height:500px;
+    background: rgb(227, 216, 188) !important;
+  }
+
+  .shop_body{
+    /*background: rgb(227, 216, 188) !important;*/
   }
 
   .dashboard-avatar-img {
@@ -36,6 +45,12 @@
   width: 16%;
   margin-right:13px;
 }
+
+.shop_box_top {
+  height: 30px;
+  background:url(/components/pagesStyle/img/top.svg);
+}
+
 
 .shop-box {
   margin:10px;

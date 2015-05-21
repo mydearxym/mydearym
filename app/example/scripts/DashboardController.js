@@ -6,7 +6,9 @@ angular
   
   .controller('DashboardController', function($scope, supersonic, $timeout, $http) {
   	var self = $scope;
-  	self.navbarTitle = "UI 测试哈"
+  	// self.navbarTitle = "UI 测试哈"
+
+    supersonic.ui.tabs.hide();
 
   	jQuery("#mailMan").on("dashboard:swiper:goto", function(e, data){
       supersonic.logger.warn("dashboard:swiper:goto: " + data); // only + works
@@ -237,12 +239,17 @@ angular
   		})
   	}
   	self.goToFamily = function(){
-  		var modalView = new supersonic.ui.View("example#family-config");
-  		var options = {
-  			animate: true
-  		}
-  		supersonic.ui.modal.show(modalView, options);
-  	}
+  		supersonic.ui.tabs.select(1);
+      supersonic.ui.tabs.show();
+    
+    //   var modalView = new supersonic.ui.View("example#family-config");
+  		// var options = {
+  		// 	animate: true
+  		// }
+  		// supersonic.ui.modal.show(modalView, options);
+  	
+
+    }
   
 
   })
