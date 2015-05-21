@@ -230,7 +230,7 @@
 			<div class="col">
 				<div class="slider-wrapper" style="width:80%;margin-left:10%;margin-bottom:5px;">
 					<input type="text" class="weight-selector" />
-					
+					<h3>weight is: <span id="show_weight"></span>kg</h3>
 				</div>
 				<h5 style="color:grey;">还有体重哦</h5>
 
@@ -254,11 +254,12 @@
 
 	function weightChange() {
 		console.log("weightChange: ", weight_elem.value)
-		document.getElementById("show_weight").innerHTML = weight_elem.value;
+		// document.getElementById("show_weight").innerHTML = weight_elem.value;
 
-		setTimeout(function(){
-			$(".weight-font").html(weight_elem.value);
-		},200)
+		// setTimeout(function(){
+		// 	$(".weight-font").html(weight_elem.value);
+		// },200)
+
 	}
 
 	var height_elem = document.querySelector('.height-selector');
@@ -271,9 +272,11 @@
 		console.log("weightChange: ", height_elem.value)
 		// document.getElementById("show_weight").innerHTML = weight_elem.value;
 
-		setTimeout(function(){
-			$(".height-font").html(height_elem.value);
-		},200)
+		// setTimeout(function(){
+		// 	$(".height-font").html(height_elem.value);
+		// },200)
+	
+
 	}
 
 
