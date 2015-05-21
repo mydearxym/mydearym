@@ -22,51 +22,86 @@ angular
       $(".fuckyou").velocity("transition.expandIn", {duration: 250})
       // $(".shop_item").velocity("transition.expandIn", { stagger: 50})
   	})
-    
+
   	self.curItemsP = [
   	  {
-  	  	name: "鳄梨p",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+  	  	name: "柠檬",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
+  	  },
+
+  	  {
+  	  	name: "鳄梨",
+  	  	imgsrc: "/components/pagesStyle/img/fruits/eli.png"
   	  },
 
   	  {
   	  	name: "火龙果",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/huolongguo.png"
   	  },
 
   	  {
   	  	name: "桔子",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
-  	  },
-
-  	  {
-  	  	name: "李子",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+  	  	imgsrc: "/components/pagesStyle/img/fruits/juzi.png"
   	  },
 
   	  {
   	  	name: "榴莲",
   	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
   	  },
+
+      {
+        name: "李子",
+        imgsrc: "/components/pagesStyle/img/fruits/lizi.png"
+      },
   	
       {
         name: "香梨",
-        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+        imgsrc: "/components/pagesStyle/img/fruits/lizireal.png"
       },
 
       {
         name: "猕猴桃",
-        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.png"
       },
       {
         name: "木瓜",
-        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+        imgsrc: "/components/pagesStyle/img/fruits/mugua.png"
       },
+      
       {
-        name: "柠檬",
-        imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
-      }
+        name: "苹果",
+        imgsrc: "/components/pagesStyle/img/fruits/pinguo.png"
+      },
 
+      {
+        name: "葡萄",
+        imgsrc: "/components/pagesStyle/img/fruits/putao.png"
+      },
+
+      {
+        name: "山竹果",
+        imgsrc: "/components/pagesStyle/img/fruits/shanzhuguo.png"
+      },
+
+      {
+        name: "桃子",
+        imgsrc: "/components/pagesStyle/img/fruits/taozi.png"
+      },
+
+      {
+        name: "香蕉",
+        imgsrc: "/components/pagesStyle/img/fruits/xiangjiao.png"
+      },
+
+      {
+        name: "西瓜",
+        imgsrc: "/components/pagesStyle/img/fruits/xigua.png"
+      },
+
+      {
+        name: "椰子",
+        imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
+      }
     ]
 
     self.imgClick = function(){
