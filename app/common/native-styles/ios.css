@@ -25,7 +25,8 @@ navigation-bar button, navigation-bar back-bar-button {
 }
 
 tab-bar {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background-color: rgb(227, 216, 188);
   border-top: 1px #d8d8d8 solid;
 }
 
@@ -48,6 +49,9 @@ tab-bar-item#family {
   background-image: url(icons/cog.svg);
 }
 
+tab-bar-item#analysis {
+  background-image: url(icons/cog.svg);
+}
 
 tab-bar-item#index {
   background-image: url(icons/home.svg);

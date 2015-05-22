@@ -26,14 +26,14 @@
   }
 
 .dashboard-famliy-icon{
-  font-size: x-large;
+  /*font-size: x-large;*/
   margin-left:4%;
 }
 
-#dashboard-recommend {
-  width: 5%;
-  margin-right: 4%;
-  margin-top:7px;
+#dashboard_analysis {
+  /*width: 5%;*/
+  margin-right: 3%;
+  /*margin-top:7px;*/
  
   -webkit-animation-duration: 0.5s;
   -webkit-animation-delay: 0;

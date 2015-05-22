@@ -21,89 +21,75 @@ angular
       } else { //wine
         self.curItems = self.curItemsWine
       }
-      $(".shop_items").velocity("transition.slideUpIn", {duration: 350, stagger:300})
+      $(".shop_items").velocity("transition.slideUpIn", {duration: 350, stagger:800})
     }
 
   	self.curItemsVar = [
   	  {
-  	  	name: "蔬菜",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/ningmeng.png"
+  	  	name: "豆角",
+        imgsrc: "/components/pagesStyle/img/var/doujiao.png"
   	  },
 
   	  {
-  	  	name: "鳄梨",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/eli.png"
+  	  	name: "番茄",
+        imgsrc: "/components/pagesStyle/img/var/fanqie.png"
   	  },
 
   	  {
-  	  	name: "火龙果",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/huolongguo.png"
+  	  	name: "花菜",
+        imgsrc: "/components/pagesStyle/img/var/huacai.png"
   	  },
 
   	  {
-  	  	name: "桔子",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/juzi.png"
+  	  	name: "黄瓜",
+        imgsrc: "/components/pagesStyle/img/var/huanggua.png"
   	  },
 
   	  {
-  	  	name: "榴莲",
-  	  	imgsrc: "/components/pagesStyle/img/fruits/liulian.png"
+  	  	name: "胡萝卜",
+        imgsrc: "/components/pagesStyle/img/var/huluobo.png"
   	  },
 
       {
-        name: "李子",
-        imgsrc: "/components/pagesStyle/img/fruits/lizi.png"
+        name: "辣椒",
+        imgsrc: "/components/pagesStyle/img/var/lajiao.png"
       },
   	
       {
-        name: "香梨",
-        imgsrc: "/components/pagesStyle/img/fruits/lizireal.png"
+        name: "莲白",
+        imgsrc: "/components/pagesStyle/img/var/lianbai.png"
       },
 
       {
-        name: "猕猴桃",
-        imgsrc: "/components/pagesStyle/img/fruits/mihoutao.png"
+        name: "南瓜",
+        imgsrc: "/components/pagesStyle/img/var/nangua.png"
       },
       {
-        name: "木瓜",
-        imgsrc: "/components/pagesStyle/img/fruits/mugua.png"
+        name: "茄子",
+        imgsrc: "/components/pagesStyle/img/var/qiezi.png"
       },
       
       {
-        name: "苹果",
-        imgsrc: "/components/pagesStyle/img/fruits/pinguo.png"
+        name: "芹菜",
+        imgsrc: "/components/pagesStyle/img/var/qingcai.png"
       },
 
       {
-        name: "葡萄",
-        imgsrc: "/components/pagesStyle/img/fruits/putao.png"
+        name: "土豆",
+        imgsrc: "/components/pagesStyle/img/var/tudou.png"
       },
 
       {
-        name: "山竹果",
-        imgsrc: "/components/pagesStyle/img/fruits/shanzhuguo.png"
+        name: "洋葱",
+        imgsrc: "/components/pagesStyle/img/var/yangcong.png"
       },
 
       {
-        name: "桃子",
-        imgsrc: "/components/pagesStyle/img/fruits/taozi.png"
-      },
-
-      {
-        name: "香蕉",
-        imgsrc: "/components/pagesStyle/img/fruits/xiangjiao.png"
-      },
-
-      {
-        name: "西瓜",
-        imgsrc: "/components/pagesStyle/img/fruits/xigua.png"
-      },
-
-      {
-        name: "椰子",
-        imgsrc: "/components/pagesStyle/img/fruits/yezi.png"
+        name: "玉米",
+        imgsrc: "/components/pagesStyle/img/var/yumi.png"
       }
     ]
+
     self.curItemsFruit = [
       {
         name: "柠檬",
@@ -269,15 +255,6 @@ angular
         $("#option_panel").velocity({height:"26%"}, 200);
         self.uiOptionPanelShow = !self.uiOptionPanelShow;
       }
-
-      // var options = {
-      //  message: "iamge clicked",
-      //  buttonLabel: "Close"
-      // };
-
-      // supersonic.ui.dialog.alert("Custom title!", options).then(function() {
-      //  supersonic.logger.log("Alert closed.");
-      // });
     }
 
     self.curItems = self.curItemsVar
@@ -404,13 +381,17 @@ angular
   		});
   	}
 
-  	self.goToRecomment = function(){
+  	self.goToAnalysis = function(){
   		$timeout(function(){
-  			var view = new supersonic.ui.View("example#recommend-page");
-  			supersonic.ui.layers.push(view);
-  		})
+  			// var view = new supersonic.ui.View("example#recommend-page");
+  			// supersonic.ui.layers.push(view);
+        supersonic.ui.tabs.select(2);
+        supersonic.ui.tabs.show();
+      })
   	}
-  	self.goToFamily = function(){
+  	
+
+    self.goToFamily = function(){
   		supersonic.ui.tabs.select(1);
       supersonic.ui.tabs.show();
     

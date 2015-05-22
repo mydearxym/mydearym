@@ -14,6 +14,13 @@ module.exports =
       id: "family"
       location: "example#family-config"
     }
+
+    {
+      title: "analysis"
+      id: "analysis"
+      location: "example#analysis"
+    }
+
     {
       title: "Internet"
       id: "internet"
