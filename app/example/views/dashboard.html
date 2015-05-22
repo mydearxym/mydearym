@@ -1,5 +1,45 @@
 <link rel="stylesheet" href="/components/pagesStyle/dashboard.css" />
+
+<script src="/components/drum/contrib/hammerjs/hammer.min.js"></script>
+<script src="/components/drum/contrib/hammerjs/hammer.fakemultitouch.js"></script>
+
+<link rel="stylesheet" href="/components/drum/lib/drum.css"></link>
+<script src="/components/drum/lib/drum.js"></script>
+
+
 <style>
+  div.drum figure {
+    text-align: center;
+  }
+
+  .drum-wrapper .inner {
+    font-size: xx-large;
+  }
+
+  .drum_little .drum-wrapper .inner {
+    font-size: large !important;
+    color: tomato !important;
+  }
+
+  .final_data_style .drum-wrapper .inner {
+    font-size: medium !important;
+    color: tomato !important;
+  }
+
+  .final_data_style .drum-wrapper {
+    width:80px !important;
+  }
+
+  .drum_weight_style .drum-wrapper .inner {
+    font-size: medium !important;
+    color: tomato !important;
+  }
+
+  .drum_weight_style .drum-wrapper {
+    width:80px !important;
+  }
+
+
 #bill {
   width:100%;
   /*height:200px;*/
@@ -83,7 +123,7 @@
 
 <super-navbar>
 <super-navbar-title>
-<i class="icon ion-ios-cloud-outline"></i>你好雨蒙
+  <i class="icon ion-ios-cloud-outline"></i>你好雨蒙
 </super-navbar-title>
 
 <super-navbar-button side="right"> <i class="icon ion-ios-cloud-outline"></i></super-navbar-button>
@@ -108,7 +148,7 @@
   </div>
 
   <!-- sd http://localhost/app/example/dashboard.html -->
-  
+
   <div class="mt10"></div>
   <div class="dashboard-middle-selector">
     <!-- <span><img ng-src="/components/pagesStyle/img/charts.svg" /></span> -->
@@ -130,11 +170,6 @@
     </div>
   </div>
 
-<!--   <button ng-click="optionPanel()">open</button>
-  <button ng-click="switchBottomPanel()">switch</button>
-  <button ng-click="imgClick()">imgclick</button>
- -->
-  
   <div class="shop_box">
     <div class="shop_box_top"></div>
     <br>
@@ -184,23 +219,116 @@
     </div>
 
     <div id="buy_panel" >
+      <div class="left" style="background-color:tomato;padding-left:10px;padding-right:10px;color:white;font-weight:bold;"><i class="icon ion-archive"></i>有多重</div>
+      <div class="left" style="background-color:rgb(127, 157, 211);padding-left:20px;padding-right:20px;color:white;font-weight:bold;"><i class="icon ion-social-yen left"></i>多少钱</div>
+      <div class="left" style="background-color:rgb(142, 208, 71);padding-left:10px;padding-right:10px;color:white;font-weight:bold;"><i class="icon ion-ios-calendar-outline left"></i>保质期</div>
+
       <div class="x-large"><span ng-click="switchBottomPanel()" class="right"><i class="icon ion-android-arrow-back"></i></span></div>
       <div class="row">
-        <div class="col col-33" style="border-right: 1px dashed grey;">
-          <h4><i class="icon ion-fork"></i>有多重</h4>
+
+        <div class="col col-25" style="border-right: 1px dashed grey;position:relative;">
+          
+          <div  class="drum_weight_style">
+            <select id="drum_weight" name="weights">
+              <option value="1">100g</option>
+              <option value="2">200g</option>
+              <option selected value="3">1 斤</option>
+              <option value="5">1 斤半</option>
+              <option value="7">2 斤</option>
+              <option value="15">3 斤</option>
+              <option value="20">4 斤</option>
+              <option value="30">5 斤</option>
+              <option value="30">6 斤</option>
+            </select>
+          </div> <!--final_data_style-->
+
 
         </div>
 
-        <div class="col col-33" style="border-right: 1px dashed grey;">
-          <h4><i class="icon ion-fork"></i>保质期</h4>
+        <div class="col col-35" style="border-right: 1px dashed grey;">
+                    
+          <div class="row">
+            <div class="col">
+              <select>
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="1">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div><!--col-->
 
+            <div class="col">
+              <select>
+                <option value="1">9</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option selected value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="3">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div><!--col-->
+
+            <div class="col">
+              <select>
+                <option value="1">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option selected value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="3">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div><!--col-->
+
+            <div class="col drum_little">
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option selected value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div><!--col-->
+
+          </div><!--row-->
         </div>
 
       
-        <div class="col col-33">
-          <h4><i class="icon ion-ios-book-outline"></i>多少钱</h4>
+        <div class="col col-25">
+
+          <div  class="final_data_style">
+            <select id="final_date" name="countries">
+              <option value="1">1天</option>
+              <option value="2">2天</option>
+              <option selected value="3">3天</option>
+              <option value="5">5天</option>
+              <option value="7">7天</option>
+              <option value="15">15天</option>
+              <option value="20">20天</option>
+              <option value="30">30天</option>
+              <option value="60">60天</option>
+
+            </select>
+          </div> <!--final_data_style-->
+
         </div>
-      
 
       </div>
     </div>
@@ -210,8 +338,11 @@
 
 </div><!-- /container -->
 
-
 <script>
+
+  $("select").drum();
+  $("#final_date").drum();
+  $("#drum_weight").drum();
 
 </script>
 

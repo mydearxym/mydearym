@@ -17,6 +17,7 @@ bower_components/moment/
 bower_components/angular-moment/
 bower_components/angular-velocity/
 bower_components/angular-animate/
+bower_components/notify/
 
 .sass-cache/
 ym.keystore

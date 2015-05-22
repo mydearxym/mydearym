@@ -318,7 +318,7 @@ angular
 
   		if(parseInt(option_panel_height) > 0) {
   			$("#option_panel").velocity({height:"0"}, 200);
-  			$("#buy_panel").velocity({height:"26%"}, 300);
+  			$("#buy_panel").velocity({height:"36%"}, 300);
   		} else {
   			$("#option_panel").velocity({height:"26%"}, 200);
   			$("#buy_panel").velocity({height: "0"}, 300);
@@ -345,7 +345,7 @@ angular
 	    $("#option_panel").velocity({height:"0"}, 200);
 	    self.uiOptionPanelShow = !self.uiOptionPanelShow;
 
-	    $("#buy_panel").velocity({height:"26%"}, 200);
+	    $("#buy_panel").velocity({height:"36%"}, 200);
 	    // self.uiOptionPanelShow = !self.uiOptionPanelShow;
 
 
@@ -400,7 +400,6 @@ angular
   		// 	animate: true
   		// }
   		// supersonic.ui.modal.show(modalView, options);
-  	
 
     }
   
