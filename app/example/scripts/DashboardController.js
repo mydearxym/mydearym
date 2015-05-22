@@ -9,6 +9,33 @@ angular
   	// self.navbarTitle = "UI 测试哈"
 
     supersonic.ui.tabs.hide();
+    self.shop_bags = [
+    {
+      name: "豆角",
+      weight:"2斤",
+      price: "16"
+    },
+
+    {
+      name: "番茄",
+      weight:"3斤",
+      price: "2.6"
+    },
+
+    {
+      name: "香蕉",
+      weight:"4斤",
+      price: "23.4"
+    },
+
+    {
+      name: "啤酒",
+      weight:"3瓶",
+      price: "10.0"
+    },
+
+    ]
+
 
     self.gotoShopPage = function(page) {
       supersonic.ui.tabs.hide();
@@ -275,7 +302,13 @@ angular
   			$("#bill").velocity({height:"200px"}, 200);
   			self.uiBillShow = !self.uiBillShow;
 
-  			 $(".YM_Bill").velocity("transition.slideRightIn", { stagger: 100, duration: 250 })
+         // $(".YM_Bill").velocity("transition.slideRightIn", { stagger: 100, duration: 250 })
+  			 
+         // $timeout(function(){
+          $timeout(function(){
+            $(".bill_check_out").velocity("transition.expandIn", { duration: 250 })
+          }, 250)
+         // })
 
   		}
   	}
