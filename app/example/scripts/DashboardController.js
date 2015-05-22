@@ -386,7 +386,7 @@ angular
   			// var view = new supersonic.ui.View("example#recommend-page");
   			// supersonic.ui.layers.push(view);
         supersonic.ui.tabs.select(2);
-        supersonic.ui.tabs.show();
+        supersonic.ui.tabs.hide();
       })
   	}
   	

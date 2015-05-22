@@ -20,7 +20,8 @@ navigation-bar title {
 }
 
 navigation-bar button, navigation-bar back-bar-button {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: tomato;
   font-weight: 300;
 }
 

@@ -1,3 +1,189 @@
 
+<script src="/components/chart/chart.min.js"></script>
+<link rel="stylesheet" href="/components/odometer/themes/odometer-theme-default.css" />
+<script src="/components/odometer/odometer.min.js"></script>
 
-<h3>this is analysis tab page</h3>
+<style>
+	.seg-1 {
+		height: 35%;
+		background: rgb(229, 192, 146);
+	}
+
+	.seg-2 {
+		height: 15%;
+		background: rgb(221, 161, 112);
+	}
+	
+	.seg-3 {
+		height: 15%;
+		background: rgb(184, 118, 104);
+
+		-webkit-box-shadow: 0px 9px 5px -1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 9px 5px -1px rgba(0,0,0,0.75);
+		box-shadow: 0px 9px 5px -1px rgba(0,0,0,0.75);
+	}
+
+	.seg-4 {
+		height:35%;
+		background: rgb(77, 77, 77);
+	}
+
+
+	#doughnut_wraper {
+		/*margin-top:3%;*/
+		padding-top:12px;
+		margin-left:2%;
+	}
+
+	/*//.fantasy*/
+	.big_title_num {
+		/*font-size: 4em;*/
+		font-size:x-large;
+		color:rgb(185, 155, 134);
+		/*font-family: fantasy;*/
+		margin-left:18%;
+	}
+
+	.analysis-mid-text {
+		text-align: right;
+		font-weight: bold;
+		color:wheat;
+		padding-top:10px;
+		padding-right:10px;
+	}
+
+</style>
+
+
+<script>
+	var doughnutData = [
+	{
+		value: 300,
+		color: "#9AAE97",
+		highlight: "#9AAE97",
+		label: "蔬菜"
+	},
+	{
+		value: 100,
+		color:"#FD6549",
+		highlight: "#FD6549",
+		label: "肉类"
+	},
+	{
+		value: 100,
+		color: "#FDB45C",
+		highlight: "#FFC870",
+		label: "水果"
+	},
+	{
+		value: 80,
+		color: "#949FB1",
+		highlight: "#A8B3C5",
+		label: "饮料"
+	}
+
+	];
+
+	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+	var barChartData = {
+		labels : ["1月","2月","3月","4月","5月","6月","7月", "8月", "9月", "10月", "11月", "12月"],
+		datasets : [
+		{
+			fillColor : "rgba(255, 212, 132 ,0.2)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),
+			randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()
+			]
+		}
+
+		]
+	}
+
+	window.odometerOptions = {
+		format: '(ddd).dd',
+		duration: 300,
+		theme: "default"
+	};
+	
+
+	window.onload = function(){
+		var doughnut_ctx = document.getElementById("doughnut_chart").getContext("2d");
+		// window.myDoughnut = new Chart(doughnut_ctx).Doughnut(doughnutData, {responsive : true});
+		window.myDoughnut = new Chart(doughnut_ctx).Doughnut(doughnutData);
+	
+		var bar_ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(bar_ctx).Bar(barChartData, {
+			responsive : true,
+			scaleGridLineColor : "rgba(178, 178, 178, 0.2)",
+			barShowStroke : false,
+			animationSteps : 40
+		});
+
+		setTimeout(function(){
+			$(".ani").velocity("transition.slideUpIn", { stagger: 600, duration: 300 })
+		}, 2000)
+
+	};
+
+</script>
+
+<super-navbar ng-controller="AnalysisController">
+	<super-navbar-title>
+	<i class="icon ion-ios-cloud-outline"></i>统计分析
+	</super-navbar-title>
+	<super-navbar-button side="left" ng-click="backToHome()">< 首页</super-navbar-button>
+</super-navbar>
+
+
+<!-- sd http://localhost/app/example/analysis.html -->
+<div class="seg-1">
+
+	<div id="doughnut_wraper">
+		<div class="row">
+			<div class="col">
+				<canvas id="doughnut_chart" width="150px" height="150px"/>
+
+			</div>
+
+			<div class="col">
+				<h5 style="color:wheat;text-align:center;">本月共消耗食物: </h5>
+				<div class="big_title_num"><span class="ani">7</span><span class="ani"></span><span class="ani">8</span><span class="ani">9</span><span class="ani">k</span><span class="ani">g</span></div>
+
+				<h5 style="color:wheat;text-align:center;">共花费: </h5>
+				<div class="big_title_num"><span class="ani">9</span><span class="ani"></span><span class="ani">2</span><span class="ani">7</span><span class="ani">元</span></div>
+
+			</div>
+
+		</div>
+
+	</div><!--doughnut_wraper-->
+
+</div><!--seg-1-->
+
+<div class="seg-2 large analysis-mid-text">
+	<div>肉类： 134 kg</div> 
+	<div><i class="icon ion-social-usd"></i> : 458 元</div>
+</div>
+
+<div class="seg-3 large analysis-mid-text">
+	<div>饮料： 434 kg</div>  
+	<div><i class="icon ion-social-usd"></i> : 178 元</div>
+</div>
+
+<div class="seg-4">
+	<div id="bottom-chart" style="width:300px; overflow-x:scroll;">
+		<div id="bar-chart" style="width: 500px;">
+			<canvas id="canvas" height="135" width="400px"></canvas>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
